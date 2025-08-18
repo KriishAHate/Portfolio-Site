@@ -470,7 +470,7 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/KriishAHate", "_blank");
+          window.open("https://github.com/https://github.com/KriishAHate", "_blank");
         },
       },{
         id: 'social-instagram',
