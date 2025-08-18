@@ -398,17 +398,17 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/Portfolio-Site/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
-          title: 'A simple inline announcement.',
-          description: "",
-          section: "News",},{id: "news-you-can-learn-more-about-the-lab-i-currently-work-in-at-the-woods-hole-oceanographic-institution",
+            },},{id: "news-you-can-learn-more-about-the-lab-i-currently-work-in-at-the-woods-hole-oceanographic-institution",
           title: 'You can learn more about the lab I currently work in at the...',
           description: "",
           section: "News",},{id: "news-check-out-my-latest-feature-on-the-rowan-blog-where-i-discuss-the-multi-disciplinary-approach-in-environmental-science",
           title: 'Check out my latest feature on the Rowan Blog, where I discuss the...',
           description: "",
-          section: "News",},{id: "news-read-about-my-feature-in-the-rowan-research-magazine-pg-21-22-and-check-out-my-feature-on-rowan-university-s-youtube-channel-where-i-discuss-the-multi-disciplinary-approach-in-environmental-science",
-          title: 'Read about my feature in the Rowan Research Magazine (pg 21, 22), and...',
+          section: "News",},{id: "news-read-about-my-feature-in-the-rowan-research-magazine-pg-21-22",
+          title: 'Read about my feature in the Rowan Research Magazine (pg 21, 22).',
+          description: "",
+          section: "News",},{id: "news-check-out-my-feature-on-rowan-university-s-youtube-channel-where-i-discuss-the-multi-disciplinary-approach-in-environmental-science",
+          title: 'Check out my feature on Rowan University’s YouTube channel, where I discuss the...',
           description: "",
           section: "News",},{id: "news-check-out-my-latest-feature-on-the-humans-of-whoi-page",
           title: 'Check out my latest feature on the Humans of WHOI page!',
@@ -470,7 +470,7 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/https://github.com/KriishAHate", "_blank");
+          window.open("https://github.com/KriishAHate", "_blank");
         },
       },{
         id: 'social-instagram',
