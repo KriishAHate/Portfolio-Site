@@ -401,6 +401,18 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
+          section: "News",},{id: "news-you-can-learn-more-about-the-lab-i-currently-work-in-at-the-woods-hole-oceanographic-institution",
+          title: 'You can learn more about the lab I currently work in at the...',
+          description: "",
+          section: "News",},{id: "news-check-out-my-latest-feature-on-the-rowan-blog-where-i-discuss-the-multi-disciplinary-approach-in-environmental-science",
+          title: 'Check out my latest feature on the Rowan Blog, where I discuss the...',
+          description: "",
+          section: "News",},{id: "news-read-about-my-feature-in-the-rowan-research-magazine-pg-21-22-and-check-out-my-feature-on-rowan-university-s-youtube-channel-where-i-discuss-the-multi-disciplinary-approach-in-environmental-science",
+          title: 'Read about my feature in the Rowan Research Magazine (pg 21, 22), and...',
+          description: "",
+          section: "News",},{id: "news-check-out-my-latest-feature-on-the-humans-of-whoi-page",
+          title: 'Check out my latest feature on the Humans of WHOI page!',
+          description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
@@ -458,7 +470,7 @@ ninja.data = [{
         title: 'GitHub',
         section: 'Socials',
         handler: () => {
-          window.open("https://github.com/https://github.com/KriishAHate", "_blank");
+          window.open("https://github.com/KriishAHate", "_blank");
         },
       },{
         id: 'social-instagram',
