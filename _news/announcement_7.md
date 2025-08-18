@@ -5,6 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Read about my feature in the [Rowan Research Magazine](https://example.com) *(pg 21, 22)*,
-and check out my feature on Rowan University's YouTube channel, where I discuss the
-[Multi-Disciplinary Approach in Environmental Science](https://example.com)!
+Read about my feature in the [Rowan Research Magazine](https://example.com) *(pg 21, 22)*.
