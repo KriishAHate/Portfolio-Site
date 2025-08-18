@@ -16,19 +16,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/Portfolio-Site/research/";
           },
-        },{id: "nav-projects",
-          title: "projects",
-          description: "A growing collection of your cool projects.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/Portfolio-Site/projects/";
-          },
         },{id: "nav-blog",
           title: "blog",
           description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/Portfolio-Site/my-blog/";
+          },
+        },{id: "nav-contact",
+          title: "contact",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/Portfolio-Site/contact/";
           },
         },{id: "post-a-post-with-plotly-js",
         
