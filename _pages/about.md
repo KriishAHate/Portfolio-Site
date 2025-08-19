@@ -27,8 +27,12 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am **Kriish Hate**, an **M.S. student in Mechanical Engineering** with a concentration in **Mechatronics** at **Northeastern University**, where I am a researcher in the **Environmental Sensors Group** supervised by [Professor Amy Mueller](https://coe.northeastern.edu/people/mueller-amy/).
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests span **mechanical engineering**, **biogeochemistry**, **mechatronics**, **embedded systems**, and **marine chemistry**. Broadly, I am interested in developing **novel instrumentation** with a **systems engineering** approach—building sensors and technologies that help us better **map, monitor, and understand** complex environments.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I completed my undergraduate degree in **Environmental Science** at **Rowan University**, and prior to that, I studied **Physics** in **India**. These diverse academic experiences shaped my **interdisciplinary** outlook and sparked my drive to merge **engineering** with **environmental science**.
+
+Beyond academics, I am passionate about working with **machines**—**cars**, **motorcycles**, and everyday projects. I love **repairing**, **rebuilding**, and **restoring** mechanical systems, as well as **designing** and **building** my own furniture. Whether in the lab, workshop, or garage, I find joy in **creating**, **problem-solving**, and bringing ideas to life. I also enjoy writing about these projects—check out my [blog](https://kriishahate.github.io/Kriish-Blog/)!
+
+
