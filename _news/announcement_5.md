@@ -6,4 +6,4 @@ related_posts: false
 ---
 
 You can learn more about the lab I currently work in at the
-[Woods Hole Oceanographic Institution](https://example.com).
+[Woods Hole Oceanographic Institution](https://www2.whoi.edu/staff/mlong/).
