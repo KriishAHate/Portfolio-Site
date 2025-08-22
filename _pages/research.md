@@ -5,48 +5,164 @@ permalink: /research/
 nav: true
 nav_order: 2        # change this number to where you want it to appear in the menu
 ---
- Welcome to my research page!
 
-I am broadly interested in *Biogeochemistry, Marine chemistry, Instrumentation & Engineering*.
+<!-- ===========================
+     Research cards (2-column grid)
+     - Paste this block into `_pages/research.md`
+     - Each card links to a detailed project page
+     - Replace image paths, titles, tags, and hrefs
+     =========================== -->
 
-**I wish to build on my existing research in the following areas:**
+<style>
+  /* ---------- Layout: responsive 2-column grid ---------- */
+  .grid2 {
+    display: grid;                             /* turn on CSS grid */
+    grid-template-columns: repeat(2, 1fr);     /* 2 equal columns on wide screens */
+    gap: 1rem;                                 /* space between cards */
+  }
 
-I am particularly interested in exploring how novel technologies can aid a better
-understanding of current land–sea interactions and environments that can result in
-improved data, visualisation, and outcomes, ultimately supporting better-informed
-decision-making.
+  /* Collapse to single column on small screens */
+  @media (max-width: 720px){
+    .grid2 { grid-template-columns: 1fr; }
+  }
 
-My research interest converges at the intersection of marine chemistry,
-biogeochemistry, and engineering, aiming to apply engineering principles to
-designing novel instrumentation for enhanced ecosystem mapping.
+  /* ---------- Card + link behavior ---------- */
+  .cardlink {                                  /* make the whole card clickable */
+    text-decoration: none;                     /* remove underline on the link wrapper */
+    color: inherit;                            /* use surrounding text color */
+    display: block;
+  }
 
-1. Developing **low(er) cost sensor platforms** and observation technology.  
-2. Developing technologies such as **autonomous underwater vehicles (AUVs)** to
-   explore and understand coastal environments *in situ* and in real-time.
+  .card {
+    padding: .9rem 1rem;                       /* inner spacing */
+    border: 1px solid rgba(0,0,0,.08);         /* subtle border in light mode */
+    border-radius: 12px;                       /* rounded corners */
+    transition: transform .15s ease,
+                box-shadow .15s ease,
+                border-color .15s ease;        /* smooth hover */
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);    /* soft elevation */
+  }
 
----
-### (SCALUP) Small Customizable Autonomous Logging Underwater Platform (SCALUP) & Testing the efficacy of BIOINSPIRED antifouling treatments
+  .card:hover {                                /* lift on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.10);
+  }
 
-At WHOI in Dr. Matthew Long’s **MACHINE LAB** I worked on an autonomous logging platform.  
-The skills I gained during this project were working on embedded systems, I gained expertise in systems integration and ensuring software reliability. I developed proficiency in communication protocols like I2C and UART, and expanded my technical skill set across C/C++, Embedded C, Python, Sketch, MATLAB, and Teensy microcontrollers, along with a variety of other hardware platforms. Additionally, I conducted experiments testing the efficacy of antifouling treatments.  
-*Low cost platforms such as these provide a wider accessibility to underserved populations and help in promoting citizen science.*
+  /* ---------- Project image thumbnail ---------- */
+  .thumb {
+    width: 100%;
+    aspect-ratio: 16/9;                        /* keeps a clean 16:9 box */
+    object-fit: cover;                         /* crop to fill box without distortion */
+    border-radius: 10px;
+    display: block;
+    margin: 0 0 .6rem 0;                       /* space below image */
+  }
 
----
+  /* ---------- Titles + tags ---------- */
+  .card h3 {
+    margin: .15rem 0 .5rem;
+    font-size: 1.05rem;
+    line-height: 1.25;
+  }
 
-### Assessing salt marsh health using multispectral imagery from drones
+  .tags {                                      /* inline “pill” list */
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+  }
 
-In a project by the NJDEP (New Jersey Department of Environmental Protection) aimed at developing a novel method using multispectral imagery from drones to assess the health of New Jersey’s 200,000 acres of tidal wetlands, I contributed by learning to sample pore water chemistry as the ground-truthing component for the drone imagery used in mapping and assessing wetland health.  
-*The development of this method helped create a more rapid assessment technique and a cost-effective, labor-efficient way to map wetlands.*
+  .tag {
+    border: 1px solid rgba(0,0,0,.12);
+    padding: .18rem .55rem;
+    border-radius: 999px;                      /* fully rounded pill */
+    font-size: .8rem;
+    color: #555;
+  }
 
----
+  /* ---------- Dark mode tweaks ---------- */
+  @media (prefers-color-scheme: dark){
+    .card { border-color: rgba(255,255,255,.12);
+            box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+    .card:hover { box-shadow: 0 10px 24px rgba(0,0,0,.35); }
+    .tag { border-color: rgba(255,255,255,.16); color:#bdbdbd; }
+  }
+</style>
 
-### Denitrification Process Rates Along a Gradient of Salt Marsh Health
+<div class="grid2">
+  <!-- ================= CARD TEMPLATE =================
+       Copy/paste one of the cards below and edit:
+       - href:  link to the detailed page (e.g., /research/my-project/)
+       - src:   image path (put files in assets/img/research/)
+       - alt:   short, accessible image description
+       - <h3>:  project title
+       - <span class="tag">…</span>: keywords
+       ================================================== -->
 
-Based on this project, I developed an independent proposal focused on investigating the influence of ditching on denitrification rates, to correlate with the drone imagery and see if we are able to maintain this ecosystem service.
+  <!-- SCALUP -->
+  <a class="cardlink" href="{{ '/research/scalup/' | relative_url }}">
+    <div class="card">
+      <!-- Replace with your image; ensure the file exists -->
+      <img class="thumb"
+           src="{{ '/assets/img/research/dive.jpg' | relative_url }}"
+           alt="SCALUP autonomous logging platform"
+           loading="lazy" decoding="async">
+      <!-- Project title -->
+      <h3>SCALUP — Small Customizable Autonomous Logging Underwater Platform</h3>
+      <!-- Tags/keywords (add/remove as needed) -->
+      <div class="tags">
+        <span class="tag">Embedded Systems</span>
+        <span class="tag">C/C++</span>
+        <span class="tag">Python</span>
+        <span class="tag">Teensy</span>
+      </div>
+    </div>
+  </a>
 
----
+  <!-- Salt-marsh multispectral -->
+  <a class="cardlink" href="{{ '/research/wetlands-drone/' | relative_url }}">
+    <div class="card">
+      <img class="thumb"
+           src="{{ '/assets/img/research/field.jpg' | relative_url }}"
+           alt="Multispectral drone imagery over tidal wetlands"
+           loading="lazy" decoding="async">
+      <h3>Assessing salt-marsh health using multispectral imagery from drones</h3>
+      <div class="tags">
+        <span class="tag">Remote Sensing</span>
+        <span class="tag">Wetlands</span>
+        <span class="tag">Pore-water Chemistry</span>
+      </div>
+    </div>
+  </a>
 
-### How does nutrient composition in groundwater flow affect coastal ocean primary production?
+  <!-- Denitrification gradient -->
+  <a class="cardlink" href="{{ '/research/denitrification-salt-marsh/' | relative_url }}">
+    <div class="card">
+      <img class="thumb"
+           src="{{ '/assets/img/research/denitrification.jpg' | relative_url }}"
+           alt="Salt-marsh creek and channels"
+           loading="lazy" decoding="async">
+      <h3>Denitrification process rates along a gradient of salt-marsh health</h3>
+      <div class="tags">
+        <span class="tag">Biogeochemistry</span>
+        <span class="tag">Denitrification</span>
+      </div>
+    </div>
+  </a>
 
-Researching the interaction between groundwater discharge and the ocean is crucial due to its role in nutrient transport, particularly nitrates, phosphates, and ammonia, for which radioisotopes can be effective tracers. This study aimed to understand the understudied aspects of how increased anthropogenic activity affects the outflow of nutrients in groundwater, which is crucial for supporting coastal ecosystems by maintaining phytoplankton production and fish populations. During this project, I gained practical experience at sea and developed skills in ship-based ocean, groundwater, and radioisotope sampling techniques and knowledge in marine chemistry.  
-*However, the current methodologies necessitate advancements in real-time monitoring technologies to enhance understanding of these dynamic interactions in the context of diverse anthropogenic influences.*
+  <!-- Groundwater nutrients -->
+  <a class="cardlink" href="{{ '/research/groundwater-nutrients/' | relative_url }}">
+    <div class="card">
+      <img class="thumb"
+           src="{{ '/assets/img/research/boat.jpg' | relative_url }}"
+           alt="Coastal groundwater sampling"
+           loading="lazy" decoding="async">
+      <h3>How does nutrient composition in groundwater flow affect coastal ocean primary production?</h3>
+      <div class="tags">
+        <span class="tag">Groundwater</span>
+        <span class="tag">Radioisotopes</span>
+        <span class="tag">Primary Production</span>
+      </div>
+    </div>
+  </a>
+
+</div>
