@@ -1,81 +1,85 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: Electric Cycle
+# description: with background image
+img: assets/img/cycle.png
 importance: 1
-category: work
-related_publications: true
+# category: work
+# related_publications: true
+---
+<!-- Centered, adjustable-size YouTube embed -->
+<style>
+  /* Wrapper: centered, with an adjustable max width via --w */
+  .video-wrap{
+    width: 100%;
+    max-width: var(--w, 300px); /* <- change this inline to try sizes */
+    margin-inline: auto;        /* centers it in the page column */
+  }
+  /* 16:9 responsive box */
+  .video-wrap .frame{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect */
+  }
+  .video-wrap iframe{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+</style>
+
+<!-- Try different sizes by changing --w below (e.g., 640px, 780px, 960px, 60ch, etc.) -->
+<div class="video-wrap" style="--w: 880px;">
+  <div class="frame">
+    <iframe
+      src="https://www.youtube.com/embed/afiizOBq-4g"
+      title="Electric Cycle"
+      loading="lazy"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Highlights
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+- End-to-end build: mechanical integration, wiring, safety, testing, and tuning  
+- Modular electrical architecture for easy swapping/upgrading of components  
+- Focus on reliability and maintainability: tidy harnessing, protected connectors, serviceable layout  
+- Real-world testing on city streets (acceleration, braking, range feel)
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## What I did
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+- Mechanical: mounting the drive system, aligning chainline / belt run, vibration isolation  
+- Electrical: battery management, motor controller wiring, throttle/brake signaling, fusing & safety  
+- Firmware/controls: controller configuration and basic tuning for smooth starts  
+- Field testing: iterative test–fix–test cycles to validate performance and robustness
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+## Build Gallery
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+> Drop images in `/assets/img/projects/electric-cycle/` and update the file names below.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+![Frame + drive mockup](/assets/img/projects/electric-cycle/01.jpg)
+*Early fit-up of the drive & controls.*
 
-{% raw %}
+![Harnessing & controller](/assets/img/projects/electric-cycle/02.jpg)
+*Controller and wiring neatly packaged for serviceability.*
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+![Road test](/assets/img/projects/electric-cycle/03.jpg)
+*Shakedown rides to tune throttle response and braking feel.*
 
-{% endraw %}
+## Notes & safety
+
+- Use appropriate fusing, wire gauges, strain relief and insulation; protect against vibration and weather.  
+- Validate braking performance and safe speeds for your local roads.  
+- Charge/store batteries safely and follow manufacturer guidance.
+
+## Links
+
+- 🎥 Full video: <https://www.youtube.com/watch?v=afiizOBq-4g>
