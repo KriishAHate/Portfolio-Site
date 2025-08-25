@@ -98,6 +98,22 @@ nav_order: 2        # change this number to where you want it to appear in the m
        - <span class="tag">…</span>: keywords
        ================================================== -->
 
+<!-- Common Senses -->
+<a class="cardlink" href="{{ '/research/common-senses/' | relative_url }}">
+  <div class="card">
+    <img class="thumb"
+         src="{{ '/assets/img/research/sensorbox.jpeg' | relative_url }}"
+         alt="Portable 'Common Senses' sensor box measuring temperature and sound"
+         loading="lazy" decoding="async">
+    <h3>Common Senses — portable sensor box for temperature & sound</h3>
+    <div class="tags">
+      <span class="tag">Arduino</span>
+      <span class="tag">C/C++</span>
+      <span class="tag">Mechanical Design</span>
+    </div>
+  </div>
+</a>
+
   <!-- SCALUP -->
   <a class="cardlink" href="{{ '/research/scalup/' | relative_url }}">
     <div class="card">
@@ -118,6 +134,21 @@ nav_order: 2        # change this number to where you want it to appear in the m
     </div>
   </a>
 
+  <!-- Denitrification gradient -->
+  <a class="cardlink" href="{{ '/research/denitrification-salt-marsh/' | relative_url }}">
+    <div class="card">
+      <img class="thumb"
+           src="{{ '/assets/img/research/denitrification.jpg' | relative_url }}"
+           alt="Salt-marsh creek and channels"
+           loading="lazy" decoding="async">
+      <h3>Denitrification process rates along a gradient of salt-marsh health</h3>
+      <div class="tags">
+        <span class="tag">Biogeochemistry</span>
+        <span class="tag">Denitrification</span>
+      </div>
+    </div>
+  </a>
+
   <!-- Salt-marsh multispectral -->
   <a class="cardlink" href="{{ '/research/wetlands-drone/' | relative_url }}">
     <div class="card">
@@ -130,21 +161,6 @@ nav_order: 2        # change this number to where you want it to appear in the m
         <span class="tag">Remote Sensing</span>
         <span class="tag">Wetlands</span>
         <span class="tag">Pore-water Chemistry</span>
-      </div>
-    </div>
-  </a>
-
-  <!-- Denitrification gradient -->
-  <a class="cardlink" href="{{ '/research/denitrification-salt-marsh/' | relative_url }}">
-    <div class="card">
-      <img class="thumb"
-           src="{{ '/assets/img/research/denitrification.jpg' | relative_url }}"
-           alt="Salt-marsh creek and channels"
-           loading="lazy" decoding="async">
-      <h3>Denitrification process rates along a gradient of salt-marsh health</h3>
-      <div class="tags">
-        <span class="tag">Biogeochemistry</span>
-        <span class="tag">Denitrification</span>
       </div>
     </div>
   </a>
