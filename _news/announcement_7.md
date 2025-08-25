@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Read about my feature in the [Rowan Research Magazine](https://www.flipsnack.com/CF9CF8DD75E/rowanresearch-2023_digitalprint/full-view.html) *(pg 21, 22)*.
+The [Rowan Research Magazine](https://www.flipsnack.com/CF9CF8DD75E/rowanresearch-2023_digitalprint/full-view.html) *(pg 21, 22)* includes a feature about my work.

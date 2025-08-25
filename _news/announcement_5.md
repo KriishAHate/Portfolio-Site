@@ -5,5 +5,5 @@ inline: true
 related_posts: false
 ---
 
-You can learn more about the lab I currently work in at the
+Learn more about the lab I worked at the
 [Woods Hole Oceanographic Institution](https://www2.whoi.edu/staff/mlong/).

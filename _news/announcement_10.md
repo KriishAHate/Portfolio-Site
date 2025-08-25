@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Check out my latest article I wrote for the — [Huntington News](https://huntnewsnu.com/87641/editorial/op-ed-reaching-out-to-professors-matters-more-than-you-think/).
+Here is an op-ed written for the — [Huntington News](https://huntnewsnu.com/87641/editorial/op-ed-reaching-out-to-professors-matters-more-than-you-think/).

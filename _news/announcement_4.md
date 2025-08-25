@@ -5,5 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Check out my latest feature on the [Humans of WHOI](https://www.whoi.edu/kriish-hate/) page!
-
+A feature on the [Humans of WHOI](https://www.whoi.edu/kriish-hate/) page highlights my work and experiences.
