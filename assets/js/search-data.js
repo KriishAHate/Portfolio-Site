@@ -398,8 +398,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/Portfolio-Site/books/the_godfather/";
-            },},{id: "news-check-out-an-electric-bike-i-built-watch-the-video-on-youtube",
-          title: 'Check out an electric bike I built — watch the video on YouTube....',
+            },},{id: "news-an-electric-bike-i-built-is-showcased-in-a-watch-the-video-on-youtube",
+          title: 'An electric bike I built is showcased in a — watch the video...',
           description: "",
           section: "News",},{id: "news-the-rowan-research-magazine-pg-21-22-includes-a-feature-about-my-work",
           title: 'The Rowan Research Magazine (pg 21, 22) includes a feature about my work....',
