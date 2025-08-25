@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Check out an electric bike I built — [watch the video on YouTube](https://www.youtube.com/watch?v=afiizOBq-4g).
+An electric bike I built is showcased in a — [watch the video on YouTube](https://www.youtube.com/watch?v=afiizOBq-4g).
