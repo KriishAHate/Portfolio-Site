@@ -1,33 +1,34 @@
 ---
 layout: page
-title: "PROJECT TITLE"
-permalink: /research/denitrification/
+title: "Denitrification process rates along a gradient of salt-marsh health"
+permalink: /research/denitrification-salt-marsh/
 nav: false
-# Optional extras:
-# description: "One-line meta description for SEO"
-# hero_image: /assets/img/<slug>.jpg
-# tags: [embedded, wetlands, sensors]
+description: "Independent study to relate marsh condition and historical ditching to denitrification rates, leveraging multispectral drone mapping as context."
+hero_image: /assets/img/research/denitrification.jpg
+tags: [biogeochemistry, denitrification, wetlands, nutrient cycling]
 ---
 
 ## Overview
-What the project is, why it matters, the problem you’re solving.
+Following the NJDEP mapping work, I developed an **independent proposal** to examine how **marsh condition and historical ditching** influence **denitrification rates**. The goal is to place measured rates in the context of **multispectral drone indices** and site condition to understand **ecosystem functioning and service retention** across a marsh-health gradient.
 
 ## My role
-Your responsibilities, collaborators, lab(s), supervision.
+- Designed the study and field sampling plan across contrasting marsh conditions.  
+- Coordinated with the drone-imagery team to align sites/indices with rate measurements.  
+- Managed data collection, QA, and organization for analysis.
 
 ## Tech & methods
-- Hardware / sensors / platforms
-- Languages, libraries, tools (e.g., C/C++, Python, Teensy, I²C/UART)
-- Protocols / experiment design
+- **Field:** Transects across ditching gradients; pore-water/soil sampling at fixed plots.  
+- **Rates:** Potential denitrification assays / incubation approaches (site-appropriate).  
+- **Context data:** Use of **multispectral drone products** and site notes for interpretation.
 
 ## Results
-Key findings, outcomes, deployments, performance, figures.
+- Working hypothesis: **ditching and degraded condition reduce denitrification capacity**.  
+- Outputs will link rate measurements to spectral indices and site condition.
 
 ## Links & media
-- [PDF / poster](#)
-- [Dataset / repo](#)
-- [Video / demo](#)
+- [Study plan / doc](#)
+- [Data / repo](#)
+- [Poster / slides](#)
 
 ## Gallery (optional)
-![Alt text for image](/assets/img/<slug>-1.jpg)
-![Alt text for image](/assets/img/<slug>-2.jpg)
+![Sampling along a salt-marsh creek and channels](/assets/img/research/denitrification.jpg)

@@ -1,33 +1,35 @@
 ---
 layout: page
-title: "PROJECT TITLE"
+title: "How does nutrient composition in groundwater flow affect coastal ocean primary production?"
 permalink: /research/groundwater-nutrients/
 nav: false
-# Optional extras:
-# description: "One-line meta description for SEO"
-# hero_image: /assets/img/<slug>.jpg
-# tags: [embedded, wetlands, sensors]
+description: "Investigating nutrient transport via submarine groundwater discharge using ship-based, groundwater, and radioisotope sampling."
+hero_image: /assets/img/research/boat.jpg
+tags: [groundwater, radioisotopes, nutrients, coastal, primary production]
 ---
 
 ## Overview
-What the project is, why it matters, the problem you’re solving.
+Researching the interaction between **groundwater discharge** and the **coastal ocean** is crucial because it transports key nutrients—particularly **nitrate, phosphate, and ammonia**—that help sustain phytoplankton and fisheries. In this study, we focused on **understudied links between anthropogenic activity and the outflow of nutrients in groundwater**, with implications for coastal ecosystem productivity and resilience.
 
 ## My role
-Your responsibilities, collaborators, lab(s), supervision.
+- Conducted **ship-based ocean sampling** and **shore/nearshore groundwater sampling**.  
+- Applied **radioisotope tracers** as effective indicators of groundwater inputs.  
+- Built hands-on experience with **groundwater, radioisotope, and marine chemistry** techniques.  
+- Organized field notes, metadata, and initial QA for downstream analyses.
 
 ## Tech & methods
-- Hardware / sensors / platforms
-- Languages, libraries, tools (e.g., C/C++, Python, Teensy, I²C/UART)
-- Protocols / experiment design
+- **Field:** ocean and groundwater sampling to characterize nutrient composition.  
+- **Analytical:** nutrient measurements (NO₃⁻, PO₄³⁻, NH₄⁺) and **radioisotope tracers** for groundwater contributions.  
+- **Synthesis:** relate nutrient signatures to potential **anthropogenic influences** affecting outflow.
 
 ## Results
-Key findings, outcomes, deployments, performance, figures.
+- The work targeted **how increased human activity may alter nutrient export** from groundwater to coastal waters, with consequences for **primary production**.  
+- A key takeaway is the **need for advances in real-time monitoring** to better resolve dynamic groundwater–ocean interactions under diverse anthropogenic pressures.
 
 ## Links & media
-- [PDF / poster](#)
+- [Methods / SOPs](#)
 - [Dataset / repo](#)
-- [Video / demo](#)
+- [Cruise notes / media](#)
 
 ## Gallery (optional)
-![Alt text for image](/assets/img/<slug>-1.jpg)
-![Alt text for image](/assets/img/<slug>-2.jpg)
+![Coastal groundwater sampling aboard a small research vessel](/assets/img/research/boat.jpg)
