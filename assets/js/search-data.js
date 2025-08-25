@@ -16,6 +16,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/Portfolio-Site/research/";
           },
+        },{id: "nav-projects",
+          title: "projects",
+          description: "A collection of projects that I have worked on.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/Portfolio-Site/projects/";
+          },
         },{id: "nav-blog",
           title: "blog",
           description: "",
@@ -419,51 +426,11 @@ ninja.data = [{
           section: "News",},{id: "news-here-is-an-op-ed-written-for-the-huntington-news",
           title: 'Here is an op-ed written for the — Huntington News.',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-electric-cycle",
+          title: 'Electric Cycle',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio-Site/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/4_project/";
-            },},{id: "projects-project-5",
-          title: 'project 5',
-          description: "a project with a background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/5_project/";
-            },},{id: "projects-project-6",
-          title: 'project 6',
-          description: "a project with no image",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/6_project/";
-            },},{id: "projects-project-7",
-          title: 'project 7',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/7_project/";
-            },},{id: "projects-project-8",
-          title: 'project 8',
-          description: "an other project with a background image and giscus comments",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/8_project/";
-            },},{id: "projects-project-9",
-          title: 'project 9',
-          description: "another project with an image 🎉",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/9_project/";
             },},{
         id: 'social-email',
         title: 'email',
