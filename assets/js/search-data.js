@@ -441,6 +441,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio-Site/projects/rx135/";
+            },},{id: "projects-hero-honda-cbz-revival-amp-refresh",
+          title: 'Hero Honda CBZ — Revival &amp;amp; Refresh',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/Portfolio-Site/projects/cbz/";
             },},{
         id: 'social-email',
         title: 'email',
