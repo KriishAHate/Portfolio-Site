@@ -1,81 +1,148 @@
 ---
-layout: page
-title: project 4
-published: false
-description: another without an image
-img:
-importance: 3
-category: fun
+layout: page                      # or layout: project (if your theme has it)
+title: "Hero Honda CBZ — Revival & Refresh"
+permalink: /projects/cbz/
+image: /assets/img/projects/cbz/cover.jpg        # hero/OG image
+tags: [motorcycle, CBZ, restoration, 4-stroke, engine, chassis, wiring]
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+> Bringing a classic CBZ back to daily-ride reliability—documenting inspection, 4-stroke service, chassis/brakes, electrics, and cosmetics.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<!-- Optional YouTube embed (replace VIDEO_ID or remove)
+<div style="position:relative; padding-top:56.25%; margin:0 0 1rem 0;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="CBZ Revival"
+          allowfullscreen style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+-->
+
+![CBZ before]({{ '/assets/img/projects/cbz/before-1.jpg' | relative_url }})
+
+## Overview
+- **Model:** Hero Honda CBZ (OHC 4-stroke, Keihin CV carb, 5-speed)
+- **Goal:** Restore reliability and crisp throttle response while keeping the original character.
+- **Scope:** Full inspection, engine service, carb & intake, chassis/brakes, electrics, paint & trim.
+
+---
+
+## Baseline & goals
+- **Starting condition:** _add a line: non-runner? weak charging? oil leaks?_
+- **Risks:** old seals, flat slide/diaphragm tears, worn cam-chain/tensioner, brittle wiring, seized fasteners.
+- **Plan:** Document → Tear-down → Clean/measure → Parts list → Build in modules (engine → chassis → electrics → cosmetics).
+
+---
+
+## Tear-down & inspection
+- Photos + bag/tag all fasteners; chase threads; replace rounded hardware.
+- Degrease engine, hubs, frame junctions. Check for cracks, bent levers, warped rotors.
+- **Measurements / tests:**
+  - **Compression test** (warm if possible); leak-down if kit available.
+  - **Valve clearance** (per service manual; note intake/exhaust spec & cold/hot).
+  - **Cam-chain & tensioner** condition; timing marks aligned at TDC.
+  - **Clutch** plate thickness & spring free length; **oil pump strainer** cleaned.
+  - Wheel bearings, steering play, swingarm play.
+
+_Images:_  
+![Inspection]({{ '/assets/img/projects/cbz/inspect-1.jpg' | relative_url }})
+![Carb removed]({{ '/assets/img/projects/cbz/carb-1.jpg' | relative_url }})
+
+---
+
+## Engine service (4-stroke)
+- **Oil & filter**; flush if heavily contaminated. New drain washer.
+- **Valve clearances:** set **per manual** (e.g., Intake: _x.xx mm_, Exhaust: _x.xx mm_; replace with your numbers).
+- **Timing:** verify cam sprocket marks vs flywheel TDC; inspect cam-chain guides & automatic tensioner.
+- **Top end:** check cam lobes, rocker pads, head gasket seeping. De-carbon piston crown & chamber if needed.
+- **Clutch/gearbox:** plates within spec, basket notched? Springs replaced if weak. Shift shaft seal check.
+- **Gaskets & seals:** rocker cover, stator, clutch cover—replace any weepers.
+
+---
+
+## Fuel, intake & exhaust
+- **Keihin CV carb:** ultrasonic/solvent clean; blow all passages; inspect diaphragm for pinholes.
+- **Float height** set per manual; new bowl gasket, o-rings, needle/seat if worn.
+- **Jets (baseline):** pilot/main per factory; adjust for altitude; needle clip to eliminate mid-range bog.
+- **Airbox:** stock snorkel + fresh filter (avoid open pods unless re-jetting thoroughly).
+- **Exhaust:** check leaks, crush gasket at head; de-coke baffle if required.
+
+---
+
+## Chassis & suspension
+- **Steering head bearings:** upgrade to tapered rollers; torque + swing test.
+- **Forks:** new seals/dust caps; fresh oil (e.g., 10W; set oil height per spec); stanchion pitting check.
+- **Swingarm:** bush/bearing grease; chain slider.
+- **Wheels & tires:** true wheels; fresh rubber; rim tape good; spokes tensioned (if spoked).
+- **Chain & sprockets:** replace as a set; choose gearing for city vs highway.
+
+---
+
+## Brakes & controls
+- **Front disc:** rebuild master/caliper (seals + piston polish), bleed with fresh DOT fluid.
+- **Rear:** drum inspect & de-glaze; new shoes if below limit.
+- **Controls:** throttle/clutch cables lubed or replaced; lever free-play set correctly.
+
+---
+
+## Electrical & lighting
+- **Charging system:** stator AC output, reg/rec DC at idle/5k rpm, battery health.
+- **Harness:** repair brittle insulation; sealed crimp/spade connectors; heat-shrink.
+- **Ignition:** plug (correct heat range) + cap (5 kΩ); check coil leads; timing pickup gap per spec.
+- **Lighting:** head/park/indicators/horn; earth points cleaned.
+
+---
+
+## Cosmetics
+- Tank dent repair or PDR; **etch → filler → 2K primer → base → 2K clear** (OEM livery).
+- Frame touch-ups; polished alloy covers; new fasteners where visible; seat foam/cover refresh.
+
+_Images:_  
+![Paint prep]({{ '/assets/img/projects/cbz/paint-1.jpg' | relative_url }})
+![Assembly]({{ '/assets/img/projects/cbz/assembly-1.jpg' | relative_url }})
+
+---
+
+## Reassembly & first start
+1. Torque to spec; Loctite where required.  
+2. Fuel on, choke as needed; check for fuel/oil leaks.  
+3. Idle set warm; fan/charging verified; short shakedown.
+
+---
+
+## Tuning & road test
+- Eliminate flat spots: pilot screw, needle clip, main jet as needed.
+- Target smooth cruise AFR feel & plug color (light coffee/tan), no pinging under load.
+- Final drive ratio chosen for your use case.
+
+---
+
+## Parts & costs (example)
+| Item | Brand/Source | Qty | Cost |
+|---|---|---:|---:|
+| Oil + filter | — | 1 | ₹… |
+| Valve cover gasket | — | 1 | ₹… |
+| Carb kit (gaskets/jets/needle) | Keihin/aftermarket | 1 | ₹… |
+| Chain & sprocket set | — | 1 | ₹… |
+| Fork seals + oil | — | 1 set | ₹… |
+| Brake seals + fluid | — | — | ₹… |
+| Reg/Rec or battery (if needed) | — | 1 | ₹… |
+| **Total** |  |  | **₹…** |
+
+---
+
+## Before / After
+<div>
+  <img src="{{ '/assets/img/projects/cbz/before-2.jpg' | relative_url }}" alt="Before" style="width:49%;margin-right:1%">
+  <img src="{{ '/assets/img/projects/cbz/after-1.jpg'  | relative_url }}" alt="After"  style="width:49%">
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Lessons learned
+- Valve clearances + healthy diaphragm = 90% of rideability on CV carbs.  
+- Tapered steering bearings transform front-end feel.  
+- Clean grounds fix half the “electrical problems.”
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+## Files & references
+- Service manual & torque chart — _add PDF/links_  
+- Jetting notes & plug photos — _add link_
