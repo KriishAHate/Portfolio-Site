@@ -436,6 +436,11 @@ ninja.data = [{
           description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process.",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio-Site/projects/woodworking/";
+            },},{id: "projects-yamaha-rx-135-restoration-amp-performance-refresh",
+          title: 'Yamaha RX 135 — Restoration &amp;amp; Performance Refresh',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/Portfolio-Site/projects/rx135/";
             },},{
         id: 'social-email',
         title: 'email',
