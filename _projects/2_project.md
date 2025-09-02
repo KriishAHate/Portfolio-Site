@@ -1,82 +1,80 @@
 ---
-layout: page
-title: project 2
-published: false
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
-importance: 2
-category: work
-giscus_comments: true
+layout: page            # if your theme doesn't have this, use: layout: page
+title: "Woodworking — Stump-to-Furniture Build"
+group: work                # shows under the “work” column on /projects
+permalink: /projects/woodworking/
+image: /assets/img/projects/woodworking/cover.jpg   # project card/hero image
+description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process."
+tags: [woodworking, furniture, design, optimization]
+published: true
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+I turned a **fallen tree stump** into a functional stool/side-table.  
+This page documents the **design process** end-to-end—material constraints, parametric modeling, joinery decisions, **stability/weight optimization**, and finishing—so the build is repeatable for different stump sizes.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+---
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Materials & constraints
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **Material:** hardwood stumps, 250–350 mm Ø, 300–450 mm tall (preferably dried or moisture-controlled).  
+- **Design goals:** stable seating height, durable joinery, minimize waste, easy to maintain.  
+- **Constraints:** irregular grain, checks/end-cracks, end-grain glue behavior, overall weight.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+**Tools (typical):** hand plane / sander, drill + Forstner bits, chisels, saw, clamps, epoxy or PVA, sandpaper 80→240+, hardwax oil / water-borne poly.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+---
 
-{% raw %}
+## Parametric design & layout
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+I modeled the piece in a **parametric CAD** (Fusion 360 / FreeCAD) where these parameters drive the build:
 
-{% endraw %}
+- Seat/top diameter & target height  
+- **Leg splay** (if tripod) or **footprint ratio** (if using a base)  
+- Joinery depth/offset tied to available thickness
+
+> One model works for multiple stumps by changing only a few dimensions.
+
+![Layout and joinery planning](/assets/img/projects/woodworking/process-2.jpg "Rough layout and joinery plan")
+
+---
+
+## Stability & weight optimization
+
+- **Footprint radius** ≈ 0.35–0.45 × seat radius gave good stability.  
+- **Tripod option:** 3 legs at 120° with 8–12° splay resists tipping without looking bulky.  
+- **Weight cut:** optional 20–30 mm counterbore on the underside; keep **≥15–20 mm wall** around cavities.  
+- **Joinery:** wedged through-tenons for a visible detail, or dominos/dowels for a clean look.  
+- Prefer **epoxy or reinforced PVA** for end-grain joints.
+
+---
+
+## Build steps
+
+1. **Prep & flatten** one face; debark as needed.  
+2. **Layout** joinery from the CAD sketch; drill/route pockets with guides.  
+3. **Dry fit** and adjust shoulders for full seating.  
+4. **Glue-up & clamp** (avoid over-clamping into end-grain).  
+5. **Edge break & sanding** 80 → 120 → 180 → 240.  
+6. **Finish** with hardwax oil (repairable) or water-borne poly (higher abrasion resistance).
+
+![Rough prep / surfacing](/assets/img/projects/woodworking/process-1.jpg "Rough prep and surfacing")
+![Glue-up and clamping](/assets/img/projects/woodworking/process-3.jpg "Glue-up and clamping")
+
+---
+
+## Finish & durability
+
+- Two coats hardwax oil → light 320-grit denib → final coat.  
+- Add **felt pads** or a small base chamfer to reduce chipping and protect floors.
+
+---
+
+## Result & learnings
+
+- The **parametric template** makes future builds fast and consistent.  
+- **Leg splay** and **footprint ratio** had the biggest impact on stability.  
+- Leaving **visible joinery** adds character and simplifies maintenance.
+
+![Finished piece](/assets/img/projects/woodworking/process-4.jpg "Finished stump-to-furniture piece")
