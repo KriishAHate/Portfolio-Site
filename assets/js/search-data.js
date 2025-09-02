@@ -446,6 +446,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio-Site/projects/cbz/";
+            },},{id: "projects-project-title",
+          title: 'PROJECT TITLE',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/Portfolio-Site/projects/%3Cslug%3E/";
             },},{
         id: 'social-email',
         title: 'email',
