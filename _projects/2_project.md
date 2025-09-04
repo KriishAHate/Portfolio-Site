@@ -7,7 +7,7 @@ permalink: /projects/woodworking/
 image: /assets/img/projects/woodworking/cover.jpg   # project card/hero image
 description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process."
 tags: [woodworking, furniture, design, optimization]
-published: true
+
 ---
 
 ## Overview
