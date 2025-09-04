@@ -1,6 +1,7 @@
 ---
 layout: page                      # or layout: project (if your theme has it)
 title: "Hero Honda CBZ — Revival & Refresh"
+published: false
 permalink: /projects/cbz/
 image: /assets/img/projects/cbz/cover.jpg        # hero/OG image
 tags: [motorcycle, CBZ, restoration, 4-stroke, engine, chassis, wiring]

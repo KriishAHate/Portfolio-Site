@@ -1,6 +1,7 @@
 ---
 layout: page               # if your theme has `project`, you can use layout: project
 title: "Yamaha RX 135 — Restoration & Performance Refresh"
+published: false
 permalink: /projects/rx135/
 image: /assets/img/projects/rx135/cover.jpg     # hero/OG image
 tags: [motorcycle, restoration, RX135, 2-stroke, engine, chassis, wiring]

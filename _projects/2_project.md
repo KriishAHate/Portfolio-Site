@@ -1,6 +1,7 @@
 ---
 layout: page            # if your theme doesn't have this, use: layout: page
 title: "Woodworking — Stump-to-Furniture Build"
+published: false
 group: work                # shows under the “work” column on /projects
 permalink: /projects/woodworking/
 image: /assets/img/projects/woodworking/cover.jpg   # project card/hero image

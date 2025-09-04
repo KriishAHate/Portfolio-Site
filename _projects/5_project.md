@@ -1,6 +1,7 @@
 ---
 layout: page                      # or layout: project (if your theme has it)
 title: "PROJECT TITLE"
+published: false
 permalink: /projects/<slug>/
 date: 2025-01-01
 image: /assets/img/projects/<slug>/cover.jpg     # OG/hero
