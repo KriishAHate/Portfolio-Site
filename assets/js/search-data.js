@@ -431,11 +431,6 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/Portfolio-Site/projects/1_project/";
-            },},{id: "projects-woodworking-stump-to-furniture-build",
-          title: 'Woodworking — Stump-to-Furniture Build',
-          description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process.",
-          section: "Projects",handler: () => {
-              window.location.href = "/Portfolio-Site/projects/woodworking/";
             },},{
         id: 'social-email',
         title: 'email',
