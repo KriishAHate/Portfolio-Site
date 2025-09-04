@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://kriishahate.github.io/Portfolio-Site/sitemap.xml
+Sitemap: https://kriishhate.com/Portfolio-Site/sitemap.xml
