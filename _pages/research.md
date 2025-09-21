@@ -2,6 +2,7 @@
 layout: default
 title: research
 permalink: /research/
+description: A collection of research projects I have worked on in past labs as well as my current lab, highlighting both academic work and the progress I’ve made along the way. 
 nav: true
 nav_order: 2        # change this number to where you want it to appear in the menu
 ---
