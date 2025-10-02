@@ -30,5 +30,7 @@ Following the NJDEP mapping work, I developed an **independent proposal** to exa
 - [Data / repo](#)
 - [Poster / slides](#)
 
+<!--
 ## Gallery (optional)
 ![Sampling along a salt-marsh creek and channels](/assets/img/research/denitrification.jpg)
+-->

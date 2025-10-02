@@ -61,6 +61,7 @@ importance: 1
 - Firmware/controls: controller configuration and basic tuning for smooth starts  
 - Field testing: iterative test–fix–test cycles to validate performance and robustness
 
+<!--
 ## Build Gallery
 
 > Drop images in `/assets/img/projects/electric-cycle/` and update the file names below.
@@ -73,6 +74,8 @@ importance: 1
 
 ![Road test](/assets/img/projects/electric-cycle/03.jpg)
 *Shakedown rides to tune throttle response and braking feel.*
+
+-->
 
 ## Notes & safety
 

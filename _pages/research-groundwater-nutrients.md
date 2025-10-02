@@ -31,5 +31,7 @@ Researching the interaction between **groundwater discharge** and the **coastal 
 - [Dataset / repo](#)
 - [Cruise notes / media](#)
 
+<!--
 ## Gallery (optional)
 ![Coastal groundwater sampling aboard a small research vessel](/assets/img/research/boat.jpg)
+-->

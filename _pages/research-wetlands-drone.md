@@ -31,6 +31,7 @@ This integrated approach supports **faster, cost-effective, and labor-efficient*
 - [Dataset / repo](#)
 - [Video / demo](#)
 
+<!--
 ## Gallery (optional)
 ![Field sampling during drone operations](/assets/img/research/field.jpg)
-
+-->
