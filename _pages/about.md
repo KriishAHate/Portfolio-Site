@@ -27,7 +27,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am **Kriish Hate**, an **M.S. student in Mechanical Engineering** with a concentration in **Mechatronics** at **Northeastern University**, where I am a researcher in the [Environmental Sensors Lab](https://envsensorslab.sites.northeastern.edu/) supervised by [Professor Amy Mueller](https://coe.northeastern.edu/people/mueller-amy/).
+I am an **M.S. student in Mechanical Engineering** with a concentration in **Mechatronics** at **Northeastern University**, where I am a researcher in the [Environmental Sensors Lab](https://envsensorslab.sites.northeastern.edu/) supervised by [Professor Amy Mueller](https://coe.northeastern.edu/people/mueller-amy/).
 
 My research interests span **mechanical engineering**, **mechatronics**, **embedded systems**, **biogeochemistry** and **marine chemistry**. Broadly, I am interested in developing **novel instrumentation** with a **systems engineering** approach—building sensors and technologies that help us better **map, monitor, and understand** complex environments.
 
