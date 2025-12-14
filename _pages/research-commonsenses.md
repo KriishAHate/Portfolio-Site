@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Common Senses — portable sensor box for temperature & sound"
+title: "low-cost design of a novel temperature and sound monitoring sensor box"
 permalink: /research/common-senses/
 nav: false
 ---
