@@ -23,12 +23,13 @@ Your responsibilities, collaborators, lab(s), supervision.
 ## Results
 Key findings, outcomes, deployments, performance, figures.
 
+<!--
 ## Links & media
 - [PDF / poster](#)
 - [Dataset / repo](#)
 - [Video / demo](#)
 
-<!--
+
 ## Gallery (optional)
 ![Alt text for image](/assets/img/<slug>-1.jpg)
 ![Alt text for image](/assets/img/<slug>-2.jpg)

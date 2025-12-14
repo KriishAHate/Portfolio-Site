@@ -26,12 +26,11 @@ This integrated approach supports **faster, cost-effective, and labor-efficient*
 - The resulting workflow **reduced assessment time** while providing a **cost-effective** way to map wetland condition.  
 - Ground-truth chemistry increased confidence in image-based estimates of wetland health.
 
-## Links & media
-- [PDF / poster](#)
-- [Dataset / repo](#)
-- [Video / demo](#)
+<!--## Links & media-->
+<!--- [PDF / poster](#)-->
+<!--- [Dataset / repo](#)-->
+<!--- [Video / demo](#)-->
 
-<!--
-## Gallery (optional)
-![Field sampling during drone operations](/assets/img/research/field.jpg)
--->
+<!--## Gallery (optional)-->
+<!--![Field sampling during drone operations](/assets/img/research/field.jpg)-->
+

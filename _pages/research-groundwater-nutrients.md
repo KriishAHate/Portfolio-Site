@@ -26,12 +26,12 @@ Researching the interaction between **groundwater discharge** and the **coastal 
 - The work targeted **how increased human activity may alter nutrient export** from groundwater to coastal waters, with consequences for **primary production**.  
 - A key takeaway is the **need for advances in real-time monitoring** to better resolve dynamic groundwater–ocean interactions under diverse anthropogenic pressures.
 
-## Links & media
-- [Methods / SOPs](#)
-- [Dataset / repo](#)
-- [Cruise notes / media](#)
+<!--## Links & media-->
+<!--- [Methods / SOPs](#)-->
+<!--- [Dataset / repo](#)-->
+<!--- [Cruise notes / media](#)-->
 
-<!--
-## Gallery (optional)
-![Coastal groundwater sampling aboard a small research vessel](/assets/img/research/boat.jpg)
--->
+
+<!--## Gallery (optional)-->
+<!--![Coastal groundwater sampling aboard a small research vessel](/assets/img/research/boat.jpg)-->
+

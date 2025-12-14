@@ -23,9 +23,10 @@ I worked on a **small, customizable autonomous logging platform** for underwater
 - **Microcontrollers:** Teensy family  
 - **Languages / tools:** C/C++, **Embedded C**, Arduino **Sketch**, Python, MATLAB  
 - Additional hardware and bench tooling across a variety of platforms.
-
+  
+<!--- 
 ## Results / links
 - Antifouling test campaign completed; logging stack validated in water.
 - [Dataset or PDF](#)  
 - [Video](#)
-
+-->

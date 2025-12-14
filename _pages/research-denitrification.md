@@ -25,12 +25,12 @@ Following the NJDEP mapping work, I developed an **independent proposal** to exa
 - Working hypothesis: **ditching and degraded condition reduce denitrification capacity**.  
 - Outputs will link rate measurements to spectral indices and site condition.
 
-## Links & media
-- [Study plan / doc](#)
-- [Data / repo](#)
-- [Poster / slides](#)
+<!--- ## Links & media-->
+<!--- [Study plan / doc](#)-->
+<!--- - [Data / repo](#)-->
+<!--- - [Poster / slides](#)-->
 
-<!--
-## Gallery (optional)
-![Sampling along a salt-marsh creek and channels](/assets/img/research/denitrification.jpg)
--->
+
+<!--- ## Gallery (optional)-->
+<!--- ![Sampling along a salt-marsh creek and channels](/assets/img/research/denitrification.jpg)-->
+
