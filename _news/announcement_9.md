@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-An electric bike I built is showcased in a — [watch the video on YouTube](https://www.youtube.com/watch?v=afiizOBq-4g).
+An electric bike I built over COVID — [watch the video on YouTube](https://www.youtube.com/watch?v=afiizOBq-4g).

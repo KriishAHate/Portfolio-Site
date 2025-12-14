@@ -3,7 +3,7 @@ layout: page
 title: "SCALUP — Small Customizable Autonomous Logging Underwater Platform"
 permalink: /research/scalup/
 nav: false
-description: "Autonomous underwater logging platform; embedded systems and comms (I²C/UART); antifouling efficacy experiments."
+# description: "Autonomous underwater logging platform; embedded systems and comms (I²C/UART); antifouling efficacy experiments."
 # hero_image: /assets/img/research/dive.jpg   # optional header image
 # tags: [embedded systems, i2c, uart, teensy, antifouling]
 ---
