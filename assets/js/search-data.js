@@ -405,8 +405,8 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-an-electric-bike-i-built-is-showcased-in-a-watch-the-video-on-youtube",
-          title: 'An electric bike I built is showcased in a — watch the video...',
+            },},{id: "news-an-electric-bike-i-built-over-covid-watch-the-video-on-youtube",
+          title: 'An electric bike I built over COVID — watch the video on YouTube....',
           description: "",
           section: "News",},{id: "news-the-rowan-research-magazine-pg-21-22-includes-a-feature-about-my-work",
           title: 'The Rowan Research Magazine (pg 21, 22) includes a feature about my work....',
