@@ -106,11 +106,13 @@ nav_order: 2        # change this number to where you want it to appear in the m
          src="{{ '/assets/img/research/sensorbox.jpeg' | relative_url }}"
          alt="Portable 'Common Senses' sensor box measuring temperature and sound"
          loading="lazy" decoding="async">
-    <h3>Common Senses — portable sensor box for temperature & sound</h3>
+    <h3>Common Senses — low-cost design of a novel temperature and sound monitoring sensor box</h3>
     <div class="tags">
       <span class="tag">Arduino</span>
       <span class="tag">C/C++</span>
+      <span class="tag">prototyping+</span>
       <span class="tag">Mechanical Design</span>
+
     </div>
   </div>
 </a>

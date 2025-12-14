@@ -3,14 +3,16 @@ layout: page
 title: "Assessing salt-marsh health using multispectral imagery from drones"
 permalink: /research/wetlands-drone/
 nav: false
-description: "NJDEP project pairing drone multispectral imagery with pore-water chemistry ground truth to assess the health of New Jersey’s tidal wetlands."
+# description: "NJDEP project pairing drone multispectral imagery with pore-water chemistry ground truth to assess the health of New Jersey’s tidal wetlands."
 hero_image: /assets/img/research/field.jpg   # change or remove if you don't want a hero image
 tags: [wetlands, remote sensing, drones, pore-water chemistry]
 ---
 
+> NJDEP project pairing drone multispectral imagery with pore-water chemistry ground truth to assess the health of New Jersey’s tidal wetlands.
+
 ## Overview
 As part of an **NJDEP (New Jersey Department of Environmental Protection)** effort to develop a **novel method for assessing the health of New Jersey’s ~200,000 acres of tidal wetlands**, we paired **multispectral drone imagery** with **on-site pore-water chemistry**.  
-This integrated approach supports **faster, cost-effective, and labor-efficient** wetland mapping and condition assessment.
+This was part of a project that focused on developing a **faster, cost-effective, and labor-efficient** wetland mapping and condition assessment method.
 
 ## My role
 - Learned and performed **pore-water sampling** as the **ground-truthing** component for drone flights.  
