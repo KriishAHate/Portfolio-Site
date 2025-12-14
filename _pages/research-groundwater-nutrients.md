@@ -3,10 +3,12 @@ layout: page
 title: "How does nutrient composition in groundwater flow affect coastal ocean primary production?"
 permalink: /research/groundwater-nutrients/
 nav: false
-description: "Investigating nutrient transport via submarine groundwater discharge using ship-based, groundwater, and radioisotope sampling."
+# description: "Investigating nutrient transport via submarine groundwater discharge using ship-based, groundwater, and radioisotope sampling."
 hero_image: /assets/img/research/boat.jpg
 tags: [groundwater, radioisotopes, nutrients, coastal, primary production]
 ---
+
+> Investigating nutrient transport via submarine groundwater discharge using ship-based, groundwater, and radioisotope sampling.
 
 ## Overview
 Researching the interaction between **groundwater discharge** and the **coastal ocean** is crucial because it transports key nutrients—particularly **nitrate, phosphate, and ammonia**—that help sustain phytoplankton and fisheries. In this study, we focused on **understudied links between anthropogenic activity and the outflow of nutrients in groundwater**, with implications for coastal ecosystem productivity and resilience.

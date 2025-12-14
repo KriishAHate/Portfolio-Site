@@ -9,8 +9,7 @@ nav: false
 ---
 
 ## Overview
-I worked on a **small, customizable autonomous logging platform** for underwater deployments. The effort focused on robust data acquisition and power-aware operation while running **experiments to test the efficacy of antifouling treatments**.
-
+I worked on a **small, customizable autonomous logging platform** for underwater deployments. 
 > Low-cost platforms such as these provide wider accessibility to underserved populations and help promote **citizen science**.
 
 ## My role
@@ -20,7 +19,7 @@ I worked on a **small, customizable autonomous logging platform** for underwater
 
 ## Tech & methods
 - **Comms / protocols:** I²C, UART  
-- **Microcontrollers:** Teensy family  
+- **Microcontrollers:** Teensy  
 - **Languages / tools:** C/C++, **Embedded C**, Arduino **Sketch**, Python, MATLAB  
 - Additional hardware and bench tooling across a variety of platforms.
   
