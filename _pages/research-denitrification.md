@@ -3,10 +3,12 @@ layout: page
 title: "Denitrification process rates along a gradient of salt-marsh health"
 permalink: /research/denitrification-salt-marsh/
 nav: false
-description: "Independent study to relate marsh condition and historical ditching to denitrification rates, leveraging multispectral drone mapping as context."
+# description: "Independent study to relate marsh condition and historical ditching to denitrification rates, leveraging multispectral drone mapping as context."
 hero_image: /assets/img/research/denitrification.jpg
 tags: [biogeochemistry, denitrification, wetlands, nutrient cycling]
 ---
+
+> Independent study to relate marsh condition and historical ditching to denitrification rates, leveraging multispectral drone mapping as context.
 
 ## Overview
 Following the NJDEP mapping work, I developed an **independent proposal** to examine how **marsh condition and historical ditching** influence **denitrification rates**. The goal is to place measured rates in the context of **multispectral drone indices** and site condition to understand **ecosystem functioning and service retention** across a marsh-health gradient.
