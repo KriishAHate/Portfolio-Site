@@ -110,7 +110,7 @@ nav_order: 2        # change this number to where you want it to appear in the m
     <div class="tags">
       <span class="tag">Arduino</span>
       <span class="tag">C/C++</span>
-      <span class="tag">prototyping+</span>
+      <span class="tag">prototyping</span>
       <span class="tag">Mechanical Design</span>
 
     </div>
