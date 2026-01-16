@@ -1,81 +1,170 @@
 ---
 layout: page            # if your theme doesn't have this, use: layout: page
-title: "Woodworking — Stump-to-Furniture Build"
-published: false
+title: "Ace Cafe Tyre Tables & Wheel Hub Coffee Table"
+published: true
 group: work                # shows under the “work” column on /projects
 permalink: /projects/woodworking/
-image: /assets/img/projects/woodworking/cover.jpg   # project card/hero image
-description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process."
+img: /assets/img/projects/ww.png  # project card/hero image
+# description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process."
 tags: [woodworking, furniture, design, optimization]
 
+---
 ---
 
 ## Overview
 
-I turned a **fallen tree stump** into a functional stool/side-table.  
-This page documents the **design process** end-to-end—material constraints, parametric modeling, joinery decisions, **stability/weight optimization**, and finishing—so the build is repeatable for different stump sizes.
+Transforming **discarded automotive parts** into refined furniture that honors cafe racer culture and tells the story of Ace Cafe's significant history in motorcycle culture. This set—**tyre tables** and an **Ace Cafe London-themed wheel hub coffee table**—was designed to complement the restored motorcycle I gave my uncle for his new house, merging my automotive interest with my passion for hands-on craft and woodworking.
 
 ---
 
-## Materials & constraints
+## Concept & Design Ideology
 
-- **Material:** hardwood stumps, 250–350 mm Ø, 300–450 mm tall (preferably dried or moisture-controlled).  
-- **Design goals:** stable seating height, durable joinery, minimize waste, easy to maintain.  
-- **Constraints:** irregular grain, checks/end-cracks, end-grain glue behavior, overall weight.
+**Why salvaged automotive parts?**
 
-**Tools (typical):** hand plane / sander, drill + Forstner bits, chisels, saw, clamps, epoxy or PVA, sandpaper 80→240+, hardwax oil / water-borne poly.
+As both an automotive enthusiast and furniture maker, I saw an opportunity where others saw waste. Regular car maintenance generates tyres and components destined for junkyards—perfectly functional materials that tell a story of their own.
 
----
+**Design principles:**
 
-## Parametric design & layout
+- **Material selection:** Trying to salvage most of the discarded material (tyres, no use of plastic, sustainable materials like cane)
+- **Design language:** Polished wood against matte rubber, woven texture against smooth steel
+- **Form factor:** Storage designed into negative space between tyres, not added as an afterthought
 
-I modeled the piece in a **parametric CAD** (Fusion 360 / FreeCAD) where these parameters drive the build:
+**The Ace Cafe connection:**
 
-- Seat/top diameter & target height  
-- **Leg splay** (if tripod) or **footprint ratio** (if using a base)  
-- Joinery depth/offset tied to available thickness
-
-> One model works for multiple stumps by changing only a few dimensions.
-
-![Layout and joinery planning](/assets/img/projects/woodworking/process-2.jpg "Rough layout and joinery plan")
+Ace Cafe London birthed cafe racer culture in the 1960s—where "ton-up boys" raced between cafes at 100+ mph, creating a subculture around speed, style, and rebellion. The branding connects this furniture to that heritage, making it more than seating—it's a cultural reference point.
 
 ---
 
-## Stability & weight optimization
+## Materials
 
-- **Footprint radius** ≈ 0.35–0.45 × seat radius gave good stability.  
-- **Tripod option:** 3 legs at 120° with 8–12° splay resists tipping without looking bulky.  
-- **Weight cut:** optional 20–30 mm counterbore on the underside; keep **≥15–20 mm wall** around cavities.  
-- **Joinery:** wedged through-tenons for a visible detail, or dominos/dowels for a clean look.  
-- Prefer **epoxy or reinforced PVA** for end-grain joints.
+**Automotive salvage:**
+- Used tyres (cleaned, degreased, painted matte black)
+- Wheel hub (sanded, branded with Ace Cafe logo)
 
----
+**Woodworking:**
+- Teak wood (durability, weather resistance, warm tone)
+- Cane netting (traditional weaving for breathable seats)
+- Marine-grade epoxy (flexible bonding for mixed materials)
 
-## Build steps
-
-1. **Prep & flatten** one face; debark as needed.  
-2. **Layout** joinery from the CAD sketch; drill/route pockets with guides.  
-3. **Dry fit** and adjust shoulders for full seating.  
-4. **Glue-up & clamp** (avoid over-clamping into end-grain).  
-5. **Edge break & sanding** 80 → 120 → 180 → 240.  
-6. **Finish** with hardwax oil (repairable) or water-borne poly (higher abrasion resistance).
-
-![Rough prep / surfacing](/assets/img/projects/woodworking/process-1.jpg "Rough prep and surfacing")
-![Glue-up and clamping](/assets/img/projects/woodworking/process-3.jpg "Glue-up and clamping")
+**Finish:**
+- Progressive sanding: 80 → 120 → 180 → 240 grit
+- Teak oil and hand polish for natural grain enhancement
 
 ---
 
-## Finish & durability
+## Build Process
 
-- Two coats hardwax oil → light 320-grit denib → final coat.  
-- Add **felt pads** or a small base chamfer to reduce chipping and protect floors.
+**1. Design & Dimensioning**
+- Took measurements of an average person and accordingly sized the seat height for optimum comfort 
+- Tried top to keep the footprint of the table legs to a minimum for a sleek and compact look 
+
+**2. Cutting & Shaping**
+- Compass jig for circular cuts
+- Band saw for rough cuts, router for final dimensions
+- Hand planes for chamfering and details
+
+**3. Joinery**
+- Mortise and tenon for wooden frames
+- Marine epoxy for wood-to-rubber bonds
+- Hidden brackets for wheel hub attachment
+
+**4. Cane Integration**
+- Routed grooves in teak to receive cane
+- Pre-soaked cane for flexibility
+- Wedged and glued for permanent attachment
+
+**5. Finishing**
+- Hand-sanded with progressive grits
+- Multiple coats of teak oil with light denib between
+- Hand-buffed to satin sheen
+
+**6. Painting & Branding**
+- Degreased tyres, multiple thin paint coats
+- Stenciled and hand-painted Ace Cafe logo
+- Clear coat for protection
 
 ---
 
-## Result & learnings
+## Design Challenges Solved
 
-- The **parametric template** makes future builds fast and consistent.  
-- **Leg splay** and **footprint ratio** had the biggest impact on stability.  
-- Leaving **visible joinery** adds character and simplifies maintenance.
+**Weight distribution:** Designed wider base than top; placed 3 legs by evenly spacing them for minimum wood using and optimum stability 
 
-![Finished piece](/assets/img/projects/woodworking/process-4.jpg "Finished stump-to-furniture piece")
+**Material compatibility:** Marine-grade flexible adhesives allow for different expansion rates
+
+**Maintenance:** Separated finishes—teak re-oils independently, tyres touch up without disturbing wood
+
+---
+
+## Technical Outcomes
+
+- Stable seating with ergonomic proportions
+- ~15L hidden storage per tyre table
+- Comfortable cane seating with ventilation
+- Easy-to-clean surfaces for practical daily use
+- Modular arrangement adapts to space
+
+---
+
+## Skills Learned
+
+**Woodworking techniques:**
+- Curved cutting and circular jig fabrication
+- Traditional mortise and tenon joinery
+- Progressive sanding and surface preparation
+- Oil finishing and hand polishing
+- Cane work integration
+
+**Design capabilities:**
+- Working with diffent materials such as teak wood, metal, cane
+- Salvage material assessment and integration
+- Functional storage design within structural constraints
+- Cultural authenticity in aesthetic choices
+
+**Craft philosophy:**
+- Material history informs design decisions
+- Contrast highlights each component's character
+- Finish enhanced to suit the aesthetic of motorcycles 
+
+## Final Product Gallery
+
+<div id="imageGallery" style="display: flex; gap: 1rem; overflow-x: auto; padding: 1rem 0; scroll-behavior: smooth;">
+  <img src="/assets/img/projects/ww01.JPG" alt="Furniture set overview" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/assets/img/projects/ww02.JPG" alt="Detail view 1" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/assets/img/projects/ww03.JPG" alt="Detail view 2" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/assets/img/projects/ww04.JPG" alt="Detail view 3" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/assets/img/projects/ww05.JPG" alt="Detail view 4" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/assets/img/projects/ww06.JPG" alt="Complete installation" onclick="openModal(this.src)" style="height: 300px; width: auto; object-fit: cover; border-radius: 8px; flex-shrink: 0; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+</div>
+
+<!-- Modal for image popout -->
+<div id="imageModal" onclick="closeModal()" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); cursor: pointer;">
+  <span style="position: absolute; top: 20px; right: 40px; color: #f1f1f1; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+  <img id="modalImage" style="margin: auto; display: block; max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+</div>
+
+<script>
+function openModal(src) {
+  document.getElementById('imageModal').style.display = 'block';
+  document.getElementById('modalImage').src = src;
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('imageModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+</script>
+
+---
+
+## Legacy
+
+This furniture set surrounds my uncle's motorcycle, creating a space where cafe racer culture and woodworking craftsmanship intersect. Every joint, every sanded surface, every material choice honors both the source materials and the culture they serve.
+
+---
