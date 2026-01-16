@@ -431,6 +431,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
+            },},{id: "projects-ace-cafe-tyre-tables-amp-wheel-hub-coffee-table",
+          title: 'Ace Cafe Tyre Tables &amp;amp; Wheel Hub Coffee Table',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/woodworking/";
             },},{
         id: 'social-email',
         title: 'email',
