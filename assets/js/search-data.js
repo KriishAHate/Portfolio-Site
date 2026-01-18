@@ -436,6 +436,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/woodworking/";
+            },},{id: "projects-inverted-pendulum-control-system",
+          title: 'Inverted Pendulum Control System',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/inverted-pendulum/";
             },},{
         id: 'social-email',
         title: 'email',
