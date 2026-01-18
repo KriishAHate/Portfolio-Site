@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Inverted Pendulum Control System"
+title: "Inverted Pendulum Control Systems project"
 published: true
 group: work
 permalink: /projects/inverted-pendulum/
