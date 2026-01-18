@@ -2,7 +2,7 @@
 layout: page
 title: Electric Cycle
 # description: with background image
-img: assets/img/cycle.png
+img: assets/img/cycle.jpg
 importance: 1
 # category: work
 # related_publications: true

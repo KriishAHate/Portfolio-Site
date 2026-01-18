@@ -4,7 +4,7 @@ title: "Inverted Pendulum Control Systems project"
 published: true
 group: work
 permalink: /projects/inverted-pendulum/
-img: /assets/img/projects/pendulum.png
+img: /assets/img/projects/pendulum.jpg
 importance: 3
 tags: [control systems, robotics, MATLAB, simulation, optimization]
 
