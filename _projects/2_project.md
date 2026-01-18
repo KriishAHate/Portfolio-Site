@@ -5,6 +5,7 @@ published: true
 group: work                # shows under the “work” column on /projects
 permalink: /projects/woodworking/
 img: /assets/img/projects/ww.png  # project card/hero image
+importance: 2
 # description: "Turning a fallen tree stump into functional furniture with a repeatable, optimized design process."
 tags: [woodworking, furniture, design, optimization]
 

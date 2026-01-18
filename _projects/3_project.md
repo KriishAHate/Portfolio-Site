@@ -1,150 +1,91 @@
 ---
-layout: page               # if your theme has `project`, you can use layout: project
-title: "Yamaha RX 135 — Restoration & Performance Refresh"
-published: false
-permalink: /projects/rx135/
-image: /assets/img/projects/rx135/cover.jpg     # hero/OG image
-tags: [motorcycle, restoration, RX135, 2-stroke, engine, chassis, wiring]
+layout: page
+title: "Inverted Pendulum Control System"
+published: true
+group: work
+permalink: /projects/inverted-pendulum/
+img: /assets/img/projects/pendulum.png
+importance: 3
+tags: [control systems, robotics, MATLAB, simulation, optimization]
+
 ---
-
-> A ground-up refresh of a classic 2-stroke—documenting decisions, measurements, parts, and the full build sequence.
-
-<!-- Optional: build video (replace VIDEO_ID or remove this block)
-<div style="position:relative; padding-top:56.25%; margin:0 0 1rem 0;">
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="RX135 Restoration"
-          allowfullscreen
-          style="position:absolute; inset:0; width:100%; height:100%; border:0;">
-  </iframe>
-</div>
--->
-
-![RX135 before]({{ '/assets/img/projects/rx135/before-1.jpg' | relative_url }})
 
 ## Overview
-- **Model:** Yamaha RX 135 (2-stroke)
-- **Goal:** Restore reliability, keep the bike’s character, and make sensible performance + safety upgrades.
-- **Scope:** Full inspection, engine & gearbox service, chassis/brakes, electrical tidy-up, paint & cosmetics.
+
+Designed and compared three control strategies (PID, LQR, and MPC) to stabilize an inverted pendulum on a moving cart under external disturbances. This classic control problem has real-world applications in humanoid robotics, self-balancing vehicles, rocket stabilization, and robotic arms.
+
+**Challenge:** Maintain balance at an inherently unstable equilibrium point while responding to unpredictable forces like vibrations, wind gusts, and impulses.
+
+[View Full Project Report (PDF)](/assets/img/projects/controlsystemsproject.pdf){:target="_blank"}
 
 ---
 
-## Baseline & plan
-- **Starting condition:** \_add a sentence on what you received (non-running? smoky? rust?)\_  
-- **Risks:** old seals/bearings, brittle wiring, unknown piston/cylinder history, warped rotors, seized fasteners.
-- **Plan of record:**
-  1. Document → Tear-down → Clean & measure → Parts order
-  2. Engine & gearbox
-  3. Chassis (steering, suspension, wheels/tires, brakes)
-  4. Electrical & controls
-  5. Bodywork/paint
-  6. Reassembly, heat cycles, jetting, road test
+## System Modeling
+
+Created a comprehensive mathematical model of the pendulum-cart system:
+
+- **Physical Simulation:** Developed CAD model in SOLIDWORKS and implemented rigid body dynamics in Simscape
+- **Mathematical Framework:** Derived nonlinear equations of motion using Newton's laws, then linearized around equilibrium (θ = π) for controller design
+- **State-Space Representation:** Enabled modern optimal control techniques with 4-state model (cart position/velocity, pendulum angle/velocity)
+
+**System Parameters:**
+
+| Parameter | Value |
+|-----------|-------|
+| Cart Mass | 8.44 kg |
+| Pendulum Mass | 0.79 kg |
+| Pendulum Length | 0.25 m |
+| Max Actuator Force | 40 N |
+| Disturbance | 10 N sinusoidal impulse (50ms period) |
 
 ---
 
-## Tear-down & inspection
-- Photos and bag-and-tag of **every fastener**; threads chased and anti-seize noted for reassembly.
-- Vapour/solvent clean cases, hubs, brackets. De-coke pipe & silencer.
-- **Measurements to record:**
-  - Cylinder bore Ø and taper/out-of-round (mic + bore gauge)
-  - **Piston–bore clearance** (target ~0.05–0.07 mm depending on piston brand)
-  - Ring end-gap
-  - Crank axial play & big-end radial feel
-  - Port edges (chips) & deck height
+## Three Controller Approaches
 
-_Images:_  
-![Tear down]({{ '/assets/img/projects/rx135/teardown-1.jpg' | relative_url }})
-![Cleaned cases]({{ '/assets/img/projects/rx135/teardown-2.jpg' | relative_url }})
+| Controller | Design Approach | Key Strengths | Limitations |
+|------------|----------------|---------------|-------------|
+| **PID (Cascaded)** | Dual-loop: inner loop stabilizes pendulum, outer loop controls cart position | Simplest design, minimal computation | Time-intensive manual tuning, no constraint handling |
+| **LQR** | Optimal state feedback minimizing J = ∫(X^T·Q·X + U^T·R·U)dt<br>Gain Matrix: K = [-10.00, -16.79, 228.09, 35.81] | Best overall performance, intuitive weight-based tuning | High actuator effort (38N peak) |
+| **MPC** | Predictive optimization over future horizon with Kalman filter-based state estimation | Lowest actuator effort (28N), guaranteed constraint satisfaction | High computational cost (2.45s vs 0.02s for PID) |
 
 ---
 
-## Engine refresh
-- **Top end:** new piston & rings (size to bore), small-end bearing, base/head gaskets; ports lightly de-burred.  
-- **Crank & seals:** fresh **left/right crank seals** (critical on 2-strokes), main bearings if rough/noisy.  
-- **Carburetor:** clean, float height set; baseline jets (e.g., **Mikuni VM**: pilot 20–25, main 110–120, needle mid clip—_tune for your bike/altitude_).  
-- **Exhaust:** de-coke header/chamber; check baffles; fresh packing if applicable.  
-- **Gearbox/clutch:** plates measured, springs within spec, fresh oil (per manual).
+## Results & Performance Comparison
+
+| Performance Metric | PID | LQR | MPC | Winner |
+|-------------------|-----|-----|-----|--------|
+| **Settling Time (θ)** | 3.2s | 1.8s | 2.5s | LQR |
+| **Settling Time (x)** | 4.1s | 2.3s | 3.2s | LQR |
+| **Overshoot (θ)** | 12% | 5% | 8% | LQR |
+| **Overshoot (x)** | 8% | 3% | 6% | LQR |
+| **Max Actuator Force** | 35N | 38N | 28N | MPC |
+| **Computation Time** | 0.02s | 0.15s | 2.45s | PID |
 
 ---
 
-## Chassis & suspension
-- **Steering head bearings:** replace with tapered rollers; torque + check swing smoothness.
-- **Forks:** new seals & oil (e.g., 10 W, set oil height); stanchions checked for pitting.  
-- **Swingarm:** bush/bearing inspection, grease.  
-- **Wheels/tires:** true wheels; new rubber to suit use; check spokes & rim tape.
+## Key Insights
+
+| Controller | Best Use Case |
+|------------|---------------|
+| **PID** | Simple, resource-constrained applications requiring basic stabilization |
+| **LQR** | Real-time control demanding best performance with moderate computational resources |
+| **MPC** | Offline systems requiring minimal actuator effort and strict constraint enforcement |
 
 ---
 
-## Brakes & controls
-- **Front:** new pads + rotor inspection; rebuild master/caliper with fresh seals; braided line if desired.  
-- **Rear:** shoes/rod checked; drum de-glazed.  
-- **Cables:** throttle/clutch/choke lubed or replaced; free play set to spec.  
-- **Bars/pegs:** straightness, bushings, and ergonomics set to rider.
+## Technical Skills Demonstrated
+
+- **Control Theory:** PID tuning, optimal control (LQR), predictive control (MPC)
+- **System Modeling:** Nonlinear dynamics, linearization, state-space representation
+- **Simulation:** MATLAB/Simulink, Simscape multibody dynamics, SOLIDWORKS CAD
+- **Analysis:** Performance metrics, comparative evaluation, constraint optimization
 
 ---
 
-## Electrical tidy-up
-- Replace any **brittle wires**, corroded bullet connectors; heat-shrink where needed.  
-- Battery, **reg/rec**, stator output test; all lights, horn, and kill switch confirmed.  
-- Fresh NGK plug (correct heat range) and plug cap (5 kΩ).
+## Future Directions
+
+- Hardware implementation on physical inverted pendulum system
+- Hybrid controller combining PID simplicity with MPC robustness
+- Adaptive control for time-varying dynamics
 
 ---
-
-## Bodywork & paint
-- Tankside dents filled or PDR; **etch → filler → 2K primer → base → 2K clear** (period-correct livery).  
-- Frame touch-ups or full respray depending on condition.  
-- Polished alloy covers, new fasteners where visible.
-
-_Images:_  
-![Paint work]({{ '/assets/img/projects/rx135/paint-1.jpg' | relative_url }})
-![Tank + side panels]({{ '/assets/img/projects/rx135/paint-2.jpg' | relative_url }})
-
----
-
-## Reassembly & first fire
-1. Torque everything to spec (use manual).  
-2. Fresh transmission oil; coolant _n/a_ (air-cooled) but ensure shrouds/ducts present.  
-3. Premix for first start (if running premix) **or** confirm oil pump primed/bleed per manual.  
-4. **Heat cycles:** idle 5–8 min → cool completely × 3; check for leaks, retorque head.
-
----
-
-## Jetting & road test
-- Start slightly rich; plug chops at ¼, ½, and WOT; adjust pilot/needle/main accordingly.  
-- Target **clean throttle response** and safe plug color (chocolate/tan), no sustained detonation.  
-- Final drive gearing chosen for your usage (city vs highway).
-
----
-
-## Parts & costs (example)
-| Item | Brand/Source | Qty | Cost |
-|---|---|---:|---:|
-| Piston kit (Ø x.xx) | ART/Wiseco | 1 | ₹… |
-| Crank seals (L/R) | Yamaha | 1 set | ₹… |
-| Main bearings | SKF/NTN | 2 | ₹… |
-| Fork seals & oil | — | 1 set | ₹… |
-| Pads/shoes + fluid | — | — | ₹… |
-| Cables set | — | — | ₹… |
-| Paint & consumables | — | — | ₹… |
-| **Total** |  |  | **₹…** |
-
----
-
-## Before / After
-<div>
-  <img src="{{ '/assets/img/projects/rx135/before-2.jpg' | relative_url }}" alt="Before" style="width:49%;margin-right:1%">
-  <img src="{{ '/assets/img/projects/rx135/after-1.jpg'  | relative_url }}" alt="After"  style="width:49%">
-</div>
-
----
-
-## Lessons learned
-- Air leaks are the #1 enemy on 2-strokes—**new crank seals** are cheap insurance.  
-- Bag-and-tag and torque logging save hours later.  
-- Start rich, sneak up on clean jetting.  
-- Small ergonomic tweaks (bars/pegs/levers) make it nicer than new.
-
----
-
-## Files & references
-- Service manual, parts list, jetting notes: _add links or PDFs_  
-- Paint codes / decals: _add references_
-
