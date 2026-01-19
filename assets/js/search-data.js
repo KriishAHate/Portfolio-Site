@@ -441,6 +441,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/inverted-pendulum/";
+            },},{id: "projects-dc-motor-control-systems-project",
+          title: 'DC Motor Control Systems project',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/dc-motor-control/";
             },},{
         id: 'social-email',
         title: 'email',
