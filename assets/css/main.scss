@@ -24,3 +24,17 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
+
+
+/* --- Smaller project card titles --- */
+.projects .card-title,
+.projects h2,
+.projects h3 {
+  font-size: 1.25rem;   /* try 1.1–1.3rem */
+  line-height: 1.3;
+}
+
+
+
+
+
