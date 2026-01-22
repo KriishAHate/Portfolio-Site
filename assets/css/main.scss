@@ -34,6 +34,22 @@ $max-content-width: {{ site.max_width }};
   line-height: 1.3;
 }
 
+.projects .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects .card img {
+  height: 240px;          /* tweak */
+  width: 100%;
+  object-fit: contain;
+  background: #fff;
+}
+
+.projects .card-body {
+  flex: 1 1 auto;
+}
 
 
 

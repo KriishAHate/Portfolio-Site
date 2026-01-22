@@ -1,81 +1,124 @@
 ---
-layout: page
-title: project 6
+layout: page                      # or layout: project (if your theme has it)
+title: "PROJECT TITLE"
 published: false
-description: a project with no image
-img:
-importance: 4
-category: fun
+permalink: /projects/<slug>/
+date: 2025-01-01
+image: /assets/img/projects/<slug>/cover.jpg     # OG/hero
+tags: [category, skills, tools]
+# Optional quick facts (shown below in the page body)
+role: "Your specific responsibilities"
+timeframe: "e.g., Jan–Apr 2024 (10 weeks)"
+collaborators: "Names / orgs"
+tools: "CAD, Python, Arduino, etc."
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+> **One-liner:** What the project is, who it’s for, and the result in one sentence.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
+<!-- Optional: hero video -->
+<!--
+<div style="position:relative; padding-top:56.25%; margin:0 0 1rem 0;">
+  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Demo"
+          allowfullscreen style="position:absolute; inset:0; width:100%; height:100%; border:0;"></iframe>
 </div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+-->
+
+![Cover image]({{ '/assets/img/projects/<slug>/cover.jpg' | relative_url }})
+
+---
+
+## Quick facts
+| | |
+|---|---|
+| **Context** | Class / personal / client / research; constraints & success criteria |
+| **Role** | {{ page.role }} |
+| **Timeframe** | {{ page.timeframe }} |
+| **Collaborators** | {{ page.collaborators }} |
+| **Tools** | {{ page.tools }} |
+
+---
+
+## 1) Context
+Why this project existed. Problem background, users, constraints (budget, materials, time, safety), and how success is measured.
+
+**Parameters / requirements**
+- Requirement A (with numeric target if possible)
+- Requirement B
+- Edge cases / environments
+
+---
+
+## 2) Your role
+What *you* owned end-to-end. Be concrete about independent contributions and decision-making.
+
+- Owned: ___, ___, ___  
+- Contributed to: ___ (with X, Y)
+- Interfaces with: ___ (EE/FW/ME, vendors, lab)
+
+---
+
+## 3) What, How, **Why**
+Describe the solution, how you built it, and—most important—**why** you chose that approach.
+
+**System at a glance**
+- Architecture / concept sketch (link below)
+- Key tradeoffs & rationale (why X over Y)
+- Safety, manufacturability, cost, serviceability
+
+_Visuals_  
+![Concept]({{ '/assets/img/projects/<slug>/concept-1.jpg' | relative_url }})
+![Architecture]({{ '/assets/img/projects/<slug>/arch-1.jpg' | relative_url }})
+
+---
+
+## 4) Process (show your work)
+Short, visual timeline of the build with checks and learning.
+
+**Milestones**
+1. Research & requirements → insight …
+2. Prototyping 0 → 1: what I tested, what failed, what changed
+3. Design iteration (CAD/EE/FW) → validation
+4. Integration & test → fixes
+
+**Sketches / CAD / code**
+- CAD screenshots, BOM snippets, test jigs
+- Links to repos or gists if public
+
+_Visuals_  
+<div>
+  <img src="{{ '/assets/img/projects/<slug>/proto-1.jpg' | relative_url }}" style="width:32%;margin-right:1%">
+  <img src="{{ '/assets/img/projects/<slug>/proto-2.jpg' | relative_url }}" style="width:32%;margin-right:1%">
+  <img src="{{ '/assets/img/projects/<slug>/proto-3.jpg' | relative_url }}" style="width:32%">
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## 5) Results & verification
+How you measured success (numbers > adjectives).
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- Metric 1: target → actual (method)
+- Metric 2: …
+- Reliability / safety checks
+- Cost & time summary (if relevant)
 
-{% raw %}
+**Outcome**
+- Deployed? Demoed? Used by N people?
+- Awards / publications (links)
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+---
 
-{% endraw %}
+## 6) What I’d improve next
+Top 3 follow-ups and why. (This shows judgment.)
+
+- Improvement A → expected impact
+- Improvement B → tradeoff
+- Tech debt to pay down
+
+---
+
+## 7) Links & media
+- [Repo / code](#) • [Datasheet / BOM](#) • [Poster / slide deck](#) • [Demo video](#)
+
+_Extra gallery (optional)_  
+![Detail]({{ '/assets/img/projects/<slug>/detail-1.jpg' | relative_url }})
+![Test rig]({{ '/assets/img/projects/<slug>/test-1.jpg' | relative_url }})

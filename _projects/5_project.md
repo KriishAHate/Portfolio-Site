@@ -1,150 +1,151 @@
 ---
-layout: page               # if your theme has `project`, you can use layout: project
-title: "Yamaha RX 135 — Restoration & Performance Refresh"
-published: false
-permalink: /projects/rx135/
-image: /assets/img/projects/rx135/cover.jpg     # hero/OG image
-tags: [motorcycle, restoration, RX135, 2-stroke, engine, chassis, wiring]
+layout: page
+title: "Robot Sensing and Navigation"
+published: true
+group: work
+permalink: /projects/robot-navigation/
+img: /assets/img/projects/rsn.png
+importance: 5
+tags: [sensor fusion, IMU, navigation, Python, complementary filter, dead reckoning]
 ---
-
-> A ground-up refresh of a classic 2-stroke—documenting decisions, measurements, parts, and the full build sequence.
-
-<!-- Optional: build video (replace VIDEO_ID or remove this block)
-<div style="position:relative; padding-top:56.25%; margin:0 0 1rem 0;">
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="RX135 Restoration"
-          allowfullscreen
-          style="position:absolute; inset:0; width:100%; height:100%; border:0;">
-  </iframe>
-</div>
--->
-
-![RX135 before]({{ '/assets/img/projects/rx135/before-1.jpg' | relative_url }})
-
 ## Overview
-- **Model:** Yamaha RX 135 (2-stroke)
-- **Goal:** Restore reliability, keep the bike’s character, and make sensible performance + safety upgrades.
-- **Scope:** Full inspection, engine & gearbox service, chassis/brakes, electrical tidy-up, paint & cosmetics.
+
+Implemented sensor fusion techniques combining IMU (accelerometer, gyroscope, magnetometer) and GPS data to estimate vehicle trajectory through dead reckoning. The project demonstrates practical challenges in inertial navigation, sensor calibration, and the critical importance of multi-sensor fusion for accurate localization.
+
+**Key Challenge:** Maintain accurate position and heading estimates from noisy, drifting IMU sensors over extended trajectories using only dead reckoning.
 
 ---
 
-## Baseline & plan
-- **Starting condition:** \_add a sentence on what you received (non-running? smoky? rust?)\_  
-- **Risks:** old seals/bearings, brittle wiring, unknown piston/cylinder history, warped rotors, seized fasteners.
-- **Plan of record:**
-  1. Document → Tear-down → Clean & measure → Parts order
-  2. Engine & gearbox
-  3. Chassis (steering, suspension, wheels/tires, brakes)
-  4. Electrical & controls
-  5. Bodywork/paint
-  6. Reassembly, heat cycles, jetting, road test
+## Magnetometer Calibration
+
+### Two-Step Calibration Process
+
+**Hard-Iron Correction:** Removed constant magnetic offset from car's speakers, motors, battery, and steel chassis by centering data at origin.
+
+**Soft-Iron Correction:** Corrected orientation-dependent scaling from ferromagnetic materials (steel body, engine block) by normalizing each axis, transforming elliptical distribution to circular.
+
+**Result:** Successfully corrected both distortion types, enabling accurate heading computation from calibrated magnetometer data.
 
 ---
 
-## Tear-down & inspection
-- Photos and bag-and-tag of **every fastener**; threads chased and anti-seize noted for reassembly.
-- Vapour/solvent clean cases, hubs, brackets. De-coke pipe & silencer.
-- **Measurements to record:**
-  - Cylinder bore Ø and taper/out-of-round (mic + bore gauge)
-  - **Piston–bore clearance** (target ~0.05–0.07 mm depending on piston brand)
-  - Ring end-gap
-  - Crank axial play & big-end radial feel
-  - Port edges (chips) & deck height
+## Complementary Filter for Heading Estimation
 
-_Images:_  
-![Tear down]({{ '/assets/img/projects/rx135/teardown-1.jpg' | relative_url }})
-![Cleaned cases]({{ '/assets/img/projects/rx135/teardown-2.jpg' | relative_url }})
+### Sensor Fusion Strategy
 
----
+Fused gyroscope and magnetometer to leverage complementary strengths:
+- **Gyroscope:** High-frequency, responsive but drifts over time
+- **Magnetometer:** Absolute reference, no drift but noisy
 
-## Engine refresh
-- **Top end:** new piston & rings (size to bore), small-end bearing, base/head gaskets; ports lightly de-burred.  
-- **Crank & seals:** fresh **left/right crank seals** (critical on 2-strokes), main bearings if rough/noisy.  
-- **Carburetor:** clean, float height set; baseline jets (e.g., **Mikuni VM**: pilot 20–25, main 110–120, needle mid clip—_tune for your bike/altitude_).  
-- **Exhaust:** de-coke header/chamber; check baffles; fresh packing if applicable.  
-- **Gearbox/clutch:** plates measured, springs within spec, fresh oil (per manual).
+**Filter Equation:**
+```
+ψₖ = α·(ψₖ₋₁ + ωz·Δt) + (1-α)·ψₘₐg
+```
 
----
+### Alpha Optimization Results
 
-## Chassis & suspension
-- **Steering head bearings:** replace with tapered rollers; torque + check swing smoothness.
-- **Forks:** new seals & oil (e.g., 10 W, set oil height); stanchions checked for pitting.  
-- **Swingarm:** bush/bearing inspection, grease.  
-- **Wheels/tires:** true wheels; new rubber to suit use; check spokes & rim tape.
+| Alpha (α) | Path Length Error | Endpoint Error |
+|-----------|------------------|----------------|
+| **0.90** | 4.2 m (0.13%) | **995.3 m** |
+| 0.95 | 4.2 m (0.13%) | 1000.3 m |
+| 0.98 | 4.2 m (0.13%) | 1013.4 m |
+| 0.99 | 4.2 m (0.13%) | 1027.5 m |
+
+**Selected α = 0.90** for best endpoint accuracy. Cutoff frequency: ~0.64 Hz at 40 Hz sample rate provides 1.5-second drift correction window.
 
 ---
 
-## Brakes & controls
-- **Front:** new pads + rotor inspection; rebuild master/caliper with fresh seals; braided line if desired.  
-- **Rear:** shoes/rod checked; drum de-glazed.  
-- **Cables:** throttle/clutch/choke lubed or replaced; free play set to spec.  
-- **Bars/pegs:** straightness, bushings, and ergonomics set to rider.
+## Velocity Estimation & Correction
+
+### Three-Stage Correction Pipeline
+
+**1. Accelerometer Bias Correction**
+```python
+# Estimate bias from stationary periods
+accel_bias = np.mean(ax[stationary_mask])
+ax_corrected = ax - accel_bias
+```
+
+**2. Zero-Velocity Updates (ZUPT)**
+```python
+# Force velocity to zero during known stops
+v_forward[stationary_mask] = 0.0
+```
+
+**3. Velocity Scaling**
+```python
+# Correct systematic scale factor error
+scale_factor = 0.139  # GPS reference
+v_forward_scaled = v_forward * scale_factor
+```
+
+### Performance Improvement
+
+| Metric | Before Correction | After Correction |
+|--------|------------------|------------------|
+| Mean Velocity | 30.18 m/s | 4.20 m/s |
+| Path Length Error | >19,000 m | **4.2 m (0.13%)** |
 
 ---
 
-## Electrical tidy-up
-- Replace any **brittle wires**, corroded bullet connectors; heat-shrink where needed.  
-- Battery, **reg/rec**, stator output test; all lights, horn, and kill switch confirmed.  
-- Fresh NGK plug (correct heat range) and plug cap (5 kΩ).
+## Dead Reckoning Performance
+
+### Trajectory Estimation vs GPS Ground Truth
+
+| Metric | GPS | IMU Dead Reckoning |
+|--------|-----|-------------------|
+| **Path Length** | 3179.1 m | 3183.3 m |
+| **Path Error** | - | 4.2 m (0.13%) |
+| **Endpoint Error** | - | 995.3 m |
+| **Agreement Duration** | - | **2.0 seconds** |
+
+### Position Error Growth
+
+| Time | Position Error |
+|------|---------------|
+| 2s | 2 m |
+| 10s | 14.4 m |
+| 60s | 191.7 m |
+| 300s | 545.0 m |
+| 757s | 1039.3 m |
+
+**Critical Finding:** Despite 0.13% path length accuracy, position diverged within 2 seconds and accumulated to 1 km error by journey end.
 
 ---
 
-## Bodywork & paint
-- Tankside dents filled or PDR; **etch → filler → 2K primer → base → 2K clear** (period-correct livery).  
-- Frame touch-ups or full respray depending on condition.  
-- Polished alloy covers, new fasteners where visible.
+## Key Insights
 
-_Images:_  
-![Paint work]({{ '/assets/img/projects/rx135/paint-1.jpg' | relative_url }})
-![Tank + side panels]({{ '/assets/img/projects/rx135/paint-2.jpg' | relative_url }})
+**Why Dead Reckoning Failed:**
+- Small heading errors (<1°) accumulate rapidly when integrated over distance
+- Excellent velocity magnitude but wrong direction → spiraling trajectory
+- Complementary filter balances noise and drift but cannot eliminate accumulation
 
----
+**Lateral Acceleration Analysis:**
+- Expected (v·ωz) vs observed (ay) correlation: only 0.231
+- Gravity from vehicle roll and road banking dominates measurements
+- Suspension dynamics and sensor misalignment add significant noise
 
-## Reassembly & first fire
-1. Torque everything to spec (use manual).  
-2. Fresh transmission oil; coolant _n/a_ (air-cooled) but ensure shrouds/ducts present.  
-3. Premix for first start (if running premix) **or** confirm oil pump primed/bleed per manual.  
-4. **Heat cycles:** idle 5–8 min → cool completely × 3; check for leaks, retorque head.
-
----
-
-## Jetting & road test
-- Start slightly rich; plug chops at ¼, ½, and WOT; adjust pilot/needle/main accordingly.  
-- Target **clean throttle response** and safe plug color (chocolate/tan), no sustained detonation.  
-- Final drive gearing chosen for your usage (city vs highway).
+**Practical Navigation Requirements:**
+- Position updates every 10-30 seconds essential
+- True heading initialization critical for early accuracy
+- Advanced sensor fusion (EKF) needed for GPS integration
+- Additional sensors (wheel odometry, visual odometry) improve velocity estimates
 
 ---
 
-## Parts & costs (example)
-| Item | Brand/Source | Qty | Cost |
-|---|---|---:|---:|
-| Piston kit (Ø x.xx) | ART/Wiseco | 1 | ₹… |
-| Crank seals (L/R) | Yamaha | 1 set | ₹… |
-| Main bearings | SKF/NTN | 2 | ₹… |
-| Fork seals & oil | — | 1 set | ₹… |
-| Pads/shoes + fluid | — | — | ₹… |
-| Cables set | — | — | ₹… |
-| Paint & consumables | — | — | ₹… |
-| **Total** |  |  | **₹…** |
+## Technical Skills Demonstrated
+
+- **Sensor Calibration:** Hard-iron/soft-iron magnetometer correction, accelerometer bias removal
+- **Sensor Fusion:** Complementary filtering, optimal parameter tuning (α selection)
+- **Signal Processing:** ZUPT, coordinate transformations, signal unwrapping
+- **Navigation Algorithms:** Dead reckoning, trajectory integration, error propagation analysis
+- **Data Analysis:** GPS ground truth comparison, systematic error identification
+- **Tools:** Python, NumPy, SciPy, Matplotlib
 
 ---
 
-## Before / After
-<div>
-  <img src="{{ '/assets/img/projects/rx135/before-2.jpg' | relative_url }}" alt="Before" style="width:49%;margin-right:1%">
-  <img src="{{ '/assets/img/projects/rx135/after-1.jpg'  | relative_url }}" alt="After"  style="width:49%">
-</div>
+## Conclusion
 
----
+Successfully implemented complete IMU-based navigation pipeline demonstrating both the power and fundamental limitations of dead reckoning. Complementary filter reduced endpoint error by 3% compared to higher alpha values, but position accuracy degraded to 1 km over 12 minutes despite 0.13% path length accuracy.
 
-## Lessons learned
-- Air leaks are the #1 enemy on 2-strokes—**new crank seals** are cheap insurance.  
-- Bag-and-tag and torque logging save hours later.  
-- Start rich, sneak up on clean jetting.  
-- Small ergonomic tweaks (bars/pegs/levers) make it nicer than new.
-
----
-
-## Files & references
-- Service manual, parts list, jetting notes: _add links or PDFs_  
-- Paint codes / decals: _add references_
+**Key Learning:** Accurate velocity magnitude is insufficient—small heading errors dominate long-term position accuracy, making periodic absolute position updates essential for practical autonomous navigation.
 
