@@ -446,6 +446,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/dc-motor-control/";
+            },},{id: "projects-robot-sensing-and-navigation",
+          title: 'Robot Sensing and Navigation',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/robot-navigation/";
             },},{
         id: 'social-email',
         title: 'email',
