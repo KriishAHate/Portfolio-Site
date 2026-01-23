@@ -149,3 +149,12 @@ Successfully implemented complete IMU-based navigation pipeline demonstrating bo
 
 **Key Learning:** Accurate velocity magnitude is insufficient—small heading errors dominate long-term position accuracy, making periodic absolute position updates essential for practical autonomous navigation.
 
+---
+
+## Project Visualizations
+
+<div style="display: flex; gap: 20px; justify-content: center; margin: 40px 0;">
+  <img src="/assets/img/projects/rsn01.png" alt="IMU Trajectory Comparison" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/projects/rsn02.png" alt="Sensor Fusion Results" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+</div>
+
