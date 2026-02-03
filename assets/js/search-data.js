@@ -451,6 +451,11 @@ ninja.data = [{
           description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/robot-navigation/";
+            },},{id: "projects-differential-end-cap-manual-lathe-machining",
+          title: 'Differential End Cap - Manual Lathe Machining',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/differential-end-cap/";
             },},{
         id: 'social-email',
         title: 'email',
