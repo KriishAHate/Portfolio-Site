@@ -10,6 +10,8 @@ tags: [groundwater, radioisotopes, nutrients, coastal, primary production]
 
 > Investigating nutrient transport via submarine groundwater discharge using ship-based, groundwater, and radioisotope sampling.
 
+[View Full Project Paper (PDF)](/assets/img/research/catalystpaper.pdf){:target="_blank"}
+
 ## Overview
 Researching the interaction between **groundwater discharge** and the **coastal ocean** is crucial because it transports key nutrients—particularly **nitrate, phosphate, and ammonia**—that help sustain phytoplankton and fisheries. In this study, we focused on **understudied links between anthropogenic activity and the outflow of nutrients in groundwater**, with implications for coastal ecosystem productivity and resilience.
 
