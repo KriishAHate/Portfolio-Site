@@ -9,6 +9,104 @@ importance: 3
 tags: [manual machining, lathe, turning, threading, workholding, mechanical fabrication]
 ---
 
+<style>
+/* Lightbox styles */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.lightbox-close:hover {
+  color: #bbb;
+}
+
+.clickable-image {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickable-image:hover {
+  transform: scale(1.02);
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Create lightbox element
+  const lightbox = document.createElement('div');
+  lightbox.className = 'lightbox';
+  lightbox.innerHTML = `
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" src="" alt="">
+  `;
+  document.body.appendChild(lightbox);
+
+  const lightboxImg = lightbox.querySelector('.lightbox-content');
+  const closeBtn = lightbox.querySelector('.lightbox-close');
+
+  // Add click listeners to all clickable images
+  document.querySelectorAll('.clickable-image').forEach(img => {
+    img.addEventListener('click', function() {
+      lightboxImg.src = this.src;
+      lightboxImg.alt = this.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Close lightbox when clicking close button
+  closeBtn.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  });
+
+  // Close lightbox when clicking outside image
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  // Close lightbox with Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+  });
+});
+</script>
+
 ## Overview
 
 Machined a custom differential end cap for the Northeastern Mars Rover using a manual Clausing lathe. The project required multiple operations including turning, facing, grooving, drilling, and tapping, with critical attention to dimensional accuracy and workholding strategies for a challenging cylindrical geometry.
@@ -20,7 +118,7 @@ Machined a custom differential end cap for the Northeastern Mars Rover using a m
 ## Project Setup & Planning
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/schematic.JPG" alt="Technical drawing and project setup" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/schematic.JPG" alt="Technical drawing and project setup" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Technical drawing with cross-sections, three tool holders, calculator for unit conversion, and organized tooling.</p>
 </div>
 
@@ -56,7 +154,7 @@ The technical drawing provided metric dimensions, but the Clausing lathe uses im
 ## Operation 1: Facing
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/facing.jpg" alt="Facing operation on lathe" style="width: 70%;border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/facing.jpg" alt="Facing operation on lathe" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Facing operation: Establishing the perpendicular reference surface before turning to diameter. Note the clean aluminum chips and cutting fluid application.</p>
 </div>
 
@@ -76,7 +174,7 @@ Started by facing the end of the stock to create a clean, perpendicular referenc
 ## Operation 2: Turning to Diameter
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/turning.JPG" alt="Turning operation with cutting fluid" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/turning.JPG" alt="Turning operation with cutting fluid" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Turning to diameter: Taking 0.030" cuts with cutting fluid to prevent chatter marks. The smooth surface finish demonstrates proper cutting parameters.</p>
 </div>
 
@@ -111,7 +209,7 @@ Started by facing the end of the stock to create a clean, perpendicular referenc
 ## Operation 3: Grooving
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/grooving.JPG" alt="Grooving operation with dial indicator" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/grooving.JPG" alt="Grooving operation with dial indicator" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Grooving operation on Clausing lathe: Short, stubby grooving tool provides rigidity. Dial indicator mounted on carriage tracks depth precisely.</p>
 </div>
 
@@ -159,7 +257,7 @@ Using a physical gauge provides instant feedback during machining rather than wa
 ## Operation 4: Center Drilling
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/Centredrilling.JPG" alt="Center drilling operation" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/Centredrilling.JPG" alt="Center drilling operation" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Center drilling: Short, stubby center drill in tailstock chuck creates precise starting point. The finished part shows visible grooves machined in previous operations.</p>
 </div>
 
@@ -190,7 +288,7 @@ After center drilling created the starting point, followed with the appropriate 
 ## Operation 6: Tapping - Maintaining Concentricity
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/tapping.JPG" alt="Tailstock tapping for concentric threads" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/tapping.JPG" alt="Tailstock tapping for concentric threads" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Tailstock tapping: Tap held in tailstock chuck maintains perfect alignment with rotation axis, ensuring concentric threads with turned features.</p>
 </div>
 
@@ -215,7 +313,7 @@ Holding the tap in the tailstock chuck ensures the tap stays perfectly aligned w
 ## Precision Measurement Techniques
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/dialguage.JPG" alt="Dial indicator for precision measurement" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/dialguage.JPG" alt="Dial indicator for precision measurement" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Precision measurement: Dial indicator mounted on carriage provides accurate depth control independent of handwheel backlash.</p>
 </div>
 
@@ -241,7 +339,7 @@ Dial indicators provide precise, repeatable measurements independent of machine 
 ## Operation 7: V-Block Fixturing on Milling Machine
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/vblock.JPG" alt="V-block fixturing on mill" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/vblock.JPG" alt="V-block fixturing on mill" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">V-block fixturing on milling machine: Completing operations on the flanged end where the lathe chuck couldn't grip adequately.</p>
 </div>
 
@@ -297,7 +395,7 @@ This demonstrates a critical skill in manual machining: **knowing when to transi
 ## Final Result
 
 <div style="text-align: center; margin: 30px 0;">
-  <img src="/assets/img/final.JPG" alt="Finished differential end caps" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+  <img src="/assets/img/final.JPG" alt="Finished differential end caps" class="clickable-image" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
   <p style="font-style: italic; color: #666; margin-top: 10px;">Finished parts: Two completed differential end caps showing clean grooves, threaded holes, and excellent surface finish throughout all machined features.</p>
 </div>
 
@@ -389,14 +487,3 @@ Always verify drawing units against machine units. Convert all critical dimensio
 - **Problem Solving:** Adapting to flange geometry constraints, limited stock challenges, tool length limitations
 - **Unit Conversion:** Metric to imperial conversion for dimensional accuracy
 - **Quality Control:** In-process verification, go/no-go gauging techniques
-
----
-
-## Next Steps
-
-This differential end cap project demonstrated fundamental manual machining skills on a real aerospace/robotics application. Future projects could explore:
-- Advanced workholding techniques (collet chucks, custom soft jaws, expanding mandrels)
-- Thread measurement and verification (thread gauges, optical comparators)
-- Tighter tolerances requiring more sophisticated measurement techniques
-- Multi-axis operations combining lathe and mill work in a single setup
-- Fixtures for small-batch production of complex geometries
