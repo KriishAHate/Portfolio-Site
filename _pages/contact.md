@@ -6,19 +6,22 @@ nav: true
 nav_order: 6
 ---
 
-<p class="lead">Thanks for taking the interest to contact me — I’m happy to connect.</p>
+<p class="lead">Thanks for taking the interest to contact me!.</p>
 
 ## Professional inquiries
-Email me at **Hate.k[at]northeastern[dot]edu** for:
+If you’re interested in any of the following, feel free to reach out at  
+**Hate.k[at]northeastern[dot]edu**:
 
-- Research collaborations   
-- Internships, jobs, or technical opportunities  
-- Talks, outreach, or project discussions  
-- Anything related to my past research and academic work  
+- Collaborating on a research project or technical work  
+- Discussing internships, full-time roles, or other opportunities  
+- Inviting me for a talk, workshop, or outreach event  
+- Learning more about my past research, academic projects, or current work  
 
 ## Personal & casual
-Email me at **kriish.hate1[at]gmail[dot]com** for:
+For anything outside of work, email me at  
+**kriish.hate1[at]gmail[dot]com** if you’d like to:
 
-- Cars, motorcycles and road trips 
-- Blog / content ideas, feedback, or collaborations  
-- Just talk about machines or projects 
+- Talk about cars, motorcycles, road trips, or builds  
+- Share blog/content ideas, feedback, or collaboration ideas  
+- Chat about machines, making, or personal projects  
+- Just say hello — I’m always happy to connect
