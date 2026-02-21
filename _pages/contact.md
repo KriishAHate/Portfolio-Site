@@ -6,7 +6,7 @@ nav: true
 nav_order: 6
 ---
 
-<p class="lead">Thanks for taking the interest to contact me!.</p>
+<p class="lead">Thanks for taking the interest to contact me!</p>
 
 ## Professional inquiries
 If you’re interested in any of the following, feel free to reach out at  
@@ -18,7 +18,6 @@ If you’re interested in any of the following, feel free to reach out at
 - Learning more about my past research, academic projects, or current work  
 
 ## Personal & casual
-For anything outside of work, email me at  
 **kriish.hate1[at]gmail[dot]com** if you’d like to:
 
 - Talk about cars, motorcycles, road trips, or builds  
