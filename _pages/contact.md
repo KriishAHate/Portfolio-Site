@@ -1,15 +1,24 @@
 ---
-layout: default          # use "page" if you prefer the big header banner
-title: contact
+layout: default
+title: Contact
 permalink: /contact/
 nav: true
-nav_order: 6             # move as you like in the navbar
+nav_order: 6
 ---
-<p class="lead">Thank you for taking the interest to contact me!</p>
 
-You can email me at **Kriish.hate1[at]gmail[dot]com** for:
+<p class="lead">Thanks for reaching out — I’m happy to connect.</p>
 
-- Potential opportunities and collaborations
-- Discussing my projects and experiences
-- Learning more about my work and interests
-- If you'd like to just talk about cars and motorcycles
+## Professional inquiries
+Email me at **Hate.k[at]northeastern[dot]edu** for:
+
+- Research collaborations   
+- Internships, jobs, or technical opportunities  
+- Talks, outreach, or project discussions  
+- Anything related to my past research and academic work  
+
+## Personal & casual
+Email me at **kriish.hate1[at]gmail[dot]com** for:
+
+- Cars, motorcycles and road trips 
+- Blog / content ideas, feedback, or collaborations  
+- Just talk about machines or projects 
