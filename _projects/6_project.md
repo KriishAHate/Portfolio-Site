@@ -114,9 +114,6 @@ Machined a custom differential end cap for the Northeastern Mars Rover using a m
 **Key Challenge:** Execute a complex multi-operation sequence on a manual lathe while managing limited workholding, maintaining concentricity across operations, and converting metric specifications to imperial measurements.
 
 ---
-
-## Project Setup & Planning
-
 ## Project Setup & Planning
 
 <div style="text-align: center; margin: 30px 0;">
