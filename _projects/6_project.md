@@ -117,19 +117,22 @@ Machined a custom differential end cap for the Northeastern Mars Rover using a m
 
 ## Project Setup & Planning
 
+## Project Setup & Planning
+
 <div style="text-align: center; margin: 30px 0;">
-  
-  <img src="/assets/img/schematic.JPG" 
-       alt="Technical drawing and project setup" 
-       class="clickable-image"
-       style="width: 70%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+  <a href="/assets/img/projects/Diff_bar_end_cap_schematic.pdf" target="_blank">
+    <img src="/assets/img/schematic.JPG" 
+         alt="Technical drawing and project setup"
+         style="width:70%; border-radius:8px; box-shadow:0 4px 6px rgba(0,0,0,0.1);">
+  </a>
 
   <p style="font-style: italic; color: #666; margin-top: 10px;">
     Technical drawing with cross-sections, three tool holders, calculator for unit conversion, and organized tooling.
   </p>
 
-  <p style="margin-top:10px;">
-    <a href="/assets/files/Diff_bar_end_cap_schematic.pdf" target="_blank">
+  <p>
+    <a href="/assets/img/projects/Diff_bar_end_cap_schematic.pdf" target="_blank">
       View Full Technical Schematic (PDF)
     </a>
   </p>
