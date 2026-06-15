@@ -5,18 +5,34 @@ permalink: /research/common-senses/
 nav: false
 ---
 
+---
+
+📄 [Download Portfolio Entry (PDF)](/assets/img/projects/Sensor_box_project.pdf){:target="_blank"} 
+
+📖 [Read the full thesis](https://hdl.handle.net/2047/D20859626)
+
+---
 
 ## Overview
 
-Cities expose residents to environmental stressors such as extreme heat and noise that directly affect health and quality of life, yet most monitoring systems are too sparse or expensive to capture neighborhood-scale conditions. To address this gap, a low-cost, solar-powered environmental sensor box was developed as part of my Master’s thesis work at the [Environmental Sensors Lab](https://envsensorslab.sites.northeastern.edu/) to measure temperature, humidity, and sound every minute and upload data via LTE in near-real time. Designed to cost under $500, the system enables dense, community-scale deployments that are not feasible with commercial devices, and 55 units are now deployed across Boston’s Blue Hill neighborhood to support resident advocacy and more equitable urban planning.
+Most urban environmental monitoring systems are too sparse or expensive to capture conditions at the neighborhood scale — leaving residents exposed to heat and noise hazards that go unmeasured and unaddressed.
 
-## My role
+As part of my Master's thesis at the [Environmental Sensors Lab](https://envsensorslab.sites.northeastern.edu/) at Northeastern University, I developed a solar-powered sensor box that measures temperature, humidity, and sound every minute and uploads data via LTE in near-real time. At under $500 per unit, it makes dense community-scale deployments feasible where commercial devices cannot. **55 units are now deployed across Boston's Blue Hill neighborhood**, generating continuous environmental data to support resident advocacy and more equitable urban planning.
 
-- Led **hardware design**, including enclosure and electronics prototyping  
-- Supported **manufacturing and assembly** using standardized, repeatable processes in an on-campus machine shop  
-- Conducted **bench-level testing** for sensor accuracy, power performance, and weather resistance  
-- Supported **field deployment**, including LTE connectivity validation and solar charging performance  
-- Performed **ongoing maintenance and reliability checks** across deployed units  
+## What I did
+
+- Designed the full hardware system — enclosure and electronics integration — through iterative prototyping and bench testing
+- Validated sensor accuracy, power consumption, solar charging performance, and weather resistance across 5 prototypes
+- Built a standardized manufacturing workflow in an on-campus machine shop, producing 55 units with 100% QA/QC pass rate
+- Led field deployment including LTE connectivity validation and ongoing reliability checks across all deployed units
+
+## Results
+
+- **55 units deployed** across Blue Hill, Boston — June 2025
+- **Zero mechanical failures** observed through April 2026
+- Data actively used by community partners for environmental advocacy
+
+
 
 <!-- Image strip (click to enlarge in-page) -->
 <div class="img-strip">
@@ -42,7 +58,6 @@ Cities expose residents to environmental stressors such as extreme heat and nois
     height:140px; width:auto; border-radius:12px;
     cursor: zoom-in;
   }
-
   .img-modal{
     display:none;
     position:fixed; z-index:9999;
@@ -76,7 +91,6 @@ Cities expose residents to environmental stressors such as extreme heat and nois
     modalImg.alt = img.alt || "";
     document.body.style.overflow = "hidden";
   }
-
   function closeImgModal(e){
     const modal = document.getElementById("imgModal");
     const modalImg = document.getElementById("imgModalContent");
@@ -86,7 +100,6 @@ Cities expose residents to environmental stressors such as extreme heat and nois
       document.body.style.overflow = "";
     }
   }
-
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       const modal = document.getElementById("imgModal");
@@ -97,18 +110,3 @@ Cities expose residents to environmental stressors such as extreme heat and nois
     }
   });
 </script>
-
-
-
-
-<!--
-## Tech & methods
-- **Arduino** microcontroller (C/C++)
-- Temperature & microphone modules, ADC
-- 3D-printed/laser-cut enclosure; fast-prototyping
-
-## Results / links
-- [Repo / docs](#)
-- [Demo video](#)
-  -->
-
